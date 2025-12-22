@@ -165,7 +165,11 @@ import { AppProfile2Component } from './pages/apps/users-manager/app-profile-2/a
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/admin', pathMatch: 'full' },
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
+  {
+    path: 'auth',
+    loadChildren: () => import('./pages/authentication/auth.routes').then(m => m.AUTH_ROUTES)
+  },
   {
     path: 'admin', component: AdminLayoutComponent, children: [
       { path: '', component: DashboardComponent },
@@ -189,7 +193,7 @@ export const routes: Routes = [
       { path: 'profile/documents', component: ProfileDocumentsComponent },
       { path: 'profile/followers', component: ProfileFollowersComponent },
       { path: 'profile/activity', component: ProfileActivityComponent },
-        // Account pages
+      // Account pages
       { path: 'account/overview', component: AccountOverviewComponent },
       { path: 'account/settings', component: AccountSettingsComponent },
       { path: 'account/security', component: AccountSecurityComponent },
@@ -201,19 +205,19 @@ export const routes: Routes = [
       { path: 'account/logs', component: AccountLogsComponent },
       // Apps
       { path: 'chat', component: ChatComponent },
-        //Users Manager 
-        { path: 'app-profile', component: AppProfile1Component },
-        { path: 'post-details', component: PostDetailsComponent },
-        { path: 'user', component: AppUserComponent },
-        { path: 'add-user', component: AppEditProfileComponent },
-        { path: 'edit-profile', component: AppEditProfileComponent },
-        { path: 'user-roles', component: AppUserRolesComponent },
-        { path: 'add-role', component: AppAddRoleComponent },
-        { path: 'app-profile-1', component: AppProfile1Component },
-        { path: 'app-profile-2', component: AppProfile2Component },
-        // Users Manager 
-        { path: 'customer', component: CustomerComponent },
-        { path: 'customer-profile', component: CustomerProfileComponent },
+      //Users Manager
+      { path: 'app-profile', component: AppProfile1Component },
+      { path: 'post-details', component: PostDetailsComponent },
+      { path: 'user', component: AppUserComponent },
+      { path: 'add-user', component: AppEditProfileComponent },
+      { path: 'edit-profile', component: AppEditProfileComponent },
+      { path: 'user-roles', component: AppUserRolesComponent },
+      { path: 'add-role', component: AppAddRoleComponent },
+      { path: 'app-profile-1', component: AppProfile1Component },
+      { path: 'app-profile-2', component: AppProfile2Component },
+      // Users Manager
+      { path: 'customer', component: CustomerComponent },
+      { path: 'customer-profile', component: CustomerProfileComponent },
       { path: 'contacts', component: AppContactsComponent },
       { path: 'email-compose', component: ComposeComponent },
       { path: 'email-inbox', component: InboxComponent },
@@ -345,9 +349,6 @@ export const routes: Routes = [
       { path: 'empty-page', component: EmptyComponent },
     ]
   },
-  { path: 'page-register', component: RegisterComponent },
-  { path: 'page-login', component: LoginComponent },
-  { path: 'page-forgot-password', component: ForgotPasswordComponent },
   { path: 'page-error-400', component: Error400Component },
   { path: 'page-error-403', component: Error403Component },
   { path: 'page-error-404', component: Error404Component },
