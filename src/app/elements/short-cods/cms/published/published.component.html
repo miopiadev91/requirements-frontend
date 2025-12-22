@@ -1,0 +1,92 @@
+
+<div class="cm-content-body  publish-content form excerpt accordion-collapse collapse show"id="publish">
+  <div class="card-body py-3">
+      <ul class="d-flex align-items-center mb-2">
+          <li><a href="javascript:void(0);"><i class="fa-solid fa-key"></i></a></li>
+          <li><a href="javascript:void(0);" class="ms-2">Status:</a></li>
+          <li><strong><a href="javascript:void(0);" class="mx-2">Published</a></strong></li>
+          <li><a href="javascript:void(0);" class="accordion accordion-primary"  id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne"   aria-expanded="true" role="button">Edit</a></li>
+      </ul>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordion-one">
+        <div class="accordion-body-text p-3 border rounded">
+          <div class="mb-2">
+              <label class="form-label w-100">Content Type</label>
+              <select class="publish-drop default-select form-select mb-2 w-100">
+                  <option selected>Select Status</option>
+                  <option value="1">Published</option>
+                  <option value="2">Draft</option>
+                  <option value="3">Trash</option>
+                  <option value="4">Private</option>
+                  <option value="5">Pending</option>
+              </select> 
+          </div>
+          <div>
+              <button class="btn btn-primary btn-sm me-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Ok
+            </button>
+              <button class="btn btn-danger light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>	
+      <ul class="d-flex align-items-center mb-2">
+          <li><a href="javascript:void(0);"><i class="fa-solid fa-eye"></i></a></li>
+          <li><a href="javascript:void(0);" class="ms-2">Status:</a></li>
+          <li><strong><a href="javascript:void(0);" class="mx-2">Public</a></strong></li>
+          <li><a href="javascript:void(0);" class="accordion accordion-primary"  id="headingtwo" data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-controls="collapsetwo"   aria-expanded="true" role="button">Edit</a></li>
+      </ul>
+      <div id="collapsetwo" class="collapse" aria-labelledby="headingtwo" data-bs-parent="#accordion-one">
+        <div class="accordion-body-text p-3 border rounded">
+          <div class="basic-form">
+              <form>
+                  <div class="mb-3 mb-0">
+                      <div class="radio">
+                          <label class="form-check-label"><input type="radio" name="optradio" class="form-check-input"> Public</label>
+                      </div>
+                      <div class="radio">
+                          <label class="form-check-label"><input type="radio" name="optradio" class="form-check-input"> Password Protected</label>
+                      </div>
+                      <div class="radio disabled">
+                          <label class="form-check-label"><input type="radio" name="optradio" class="form-check-input" > Private</label>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div>
+              <button class="btn btn-primary btn-sm me-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
+              Ok
+            </button>
+              <button class="btn btn-danger light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="d-flex align-items-center mb-2 flex-wrap">
+          <li><a href="javascript:void(0);"><i class="fa-solid fa-calendar-days"></i></a></li>
+          <li><a href="javascript:void(0);" class="ms-2">Published</a></li>
+          <li><strong><a href="javascript:void(0);" class="mx-2">on :24-09-2023 16:22:52 </a></strong></li>
+          <li><a href="javascript:void(0);" class="accordion accordion-primary"  id="headingthree" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-controls="collapsethree"   aria-expanded="true" role="button">Edit</a></li>
+      </ul>
+      <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-bs-parent="#accordion-one">
+        <div class="accordion-body-text p-3 mb-3 border rounded">
+          <div class="basic-form mb-3">
+              <input type="date" name="datepicker" class=" form-control" >
+          </div>
+          <div>
+              <button class="btn btn-primary btn-sm me-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
+              Ok
+            </button>
+              <button class="btn btn-danger light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr style="margin:0px;">
+  <div class="card-footer border-0 text-end py-3 ">
+      <a href="javascript:void(0);" class="btn btn-primary btn-sm">Publish</a>
+  </div>
+</div>

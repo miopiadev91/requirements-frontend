@@ -1,0 +1,57 @@
+<div class="task-card-data">
+  <span class="text-{{ textColor }} sub-title">{{ item.position }}</span>
+  <a href="javacscript:void(0)" class="text-danger float-end" (click)="onCardDelete(item.id)"><i class="fas fa-trash-alt"></i></a>
+  <div class="products">
+      <div>
+          <h6>{{ item.text }}</h6>
+          <span>INV-100023456</span>
+      </div>	
+  </div>
+  <div class="avatar-list avatar-list-stacked my-2">
+      <img src="assets/images/contacts/pic666.jpg" class="avatar rounded-circle" alt="">
+      <img src="assets/images/contacts/pic555.jpg" class="avatar rounded-circle" alt="">
+      <img src="assets/images/contacts/pic1.jpg" class="avatar rounded-circle" alt="">
+      <img src="assets/images/contacts/pic666.jpg" class="avatar rounded-circle" alt="">
+      <img src="assets/images/contacts/pic666.jpg" class="avatar rounded-circle" alt="">
+  </div>
+  <div class="my-2">
+      <span class="badge badge-primary light border-0 me-1">Issue</span>
+      <span class="badge badge-primary light border-0 ms-1">HTML</span>
+  </div>
+  <div class="d-flex align-items-cente mb-2">
+      <p class="mb-0 font-w500 text-secondary me-2">Status</p>
+      <app-dropdown [dropdown]="dropdown_status1" [active_value]="item.status"></app-dropdown>
+  </div>
+  <span class="kandan-link-color">
+    <a href="javacscript:void(0)" (click)="onCardItemEmit(item, true)" class="me-3 text-black fs-5"><i class="far fa-thumbs-up me-3"></i>{{ item.like }}</a>
+    <a href="javacscript:void(0)" (click)="onCardItemEmit(item, false)" class="text-black fs-5"><i class="far fa-thumbs-down me-2"></i></a>
+    <a href="javacscript:void(0)" (click)="onOpenComment()" class="fs-14 float-end"><i class="far fa-comment me-2"></i>{{ item.comments.length }} Comment</a>
+  </span>
+  @if (open) {
+    <div class="input-group my-2">
+      <input type="text" [(ngModel)]="commentInput" (mousedown)="$event.stopPropagation()" class="form-control px-2 py-2 h-25" placeholder="Leave a comment" />
+      @if (commentInput) {
+        <span class="input-group-addon input-group-addon-btn bg-white">
+          <button class="btn py-2 px-2 text-success shadow-none" (click)="onCommentTextEmit(item.id)" type="submit">
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+        </span>
+      }
+    </div>
+    <ng-content></ng-content>
+  }
+</div>
+<div class="card-footer d-flex align-items-center justify-content-between">
+  <div class="footer-data">
+      <span>Start Date</span>
+      <p>06 Feb 2023</p>
+  </div>
+  <div class="footer-data">
+      <span>End Date</span>
+      <p>06 Feb 2023</p>
+  </div>
+  <div class="footer-data">
+      <span class="d-block">Priority</span>
+      <app-dropdown [dropdown]="dropdown_status2" [active_value]="'High'"></app-dropdown>
+  </div>
+</div>

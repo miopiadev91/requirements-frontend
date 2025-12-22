@@ -1,0 +1,1086 @@
+<div class="content-body default-height">
+  <!-- Breadcrumb  -->
+  <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+  <div class="container-fluid">
+
+    <app-profile-overview-head></app-profile-overview-head>
+
+    <div class="tab-content" id="tabContentMyProfileBottom">
+      <div class="row">
+        <div class="col-xxl-9 col-xl-8">
+          <div class="card">
+            <div class="card-header py-3 d-block d-sm-flex">
+              <h4 class="heading mb-0">Jan 23, 2024</h4>
+                <ul class="nav nav-pills mt-3 mt-sm-0" ngbNav #nav1="ngbNav" [(activeId)]="active">
+                  <li [ngbNavItem]="1" class="nav-item">
+                      <a href="javascript:void(0);" ngbNavLink class="nav-link ms-1"> Week </a>
+                      <ng-template ngbNavContent>
+                        <div class="widget-timeline-icons pb-3">
+                          <ul class="timeline">
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="fs-14 fw-semibold">StumbleUpon is acquired by eBay.</span>
+                                  <span class="fs-14 d-block">3:30 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="px-3 py-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row align-items-center">
+                                    <div class="col-xl-6 col-lg-12 mb-3 mb-xl-0">
+                                      <h6 class="fs-15 mb-0">Meeting with customer</h6>
+                                    </div>
+                                    <div class="col-xl-1 ms-auto col-sm-3 col-6">
+                                      <span class="badge badge-sm badge-light border-0">UI Design</span>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 col-6">
+                                      <div class="avatar-list avatar-list-stacked ms-3">
+                                        <img src="assets/images/avatar/3.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                                        <img src="assets/images/avatar/4.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                                        <div class="avatar avatar-sm bg-blue text-white rounded-circle d-inline-flex align-items-center justify-content-center">S</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-1 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <span class="badge badge-sm badge-info light border-0">In Progress</span>
+                                    </div>
+                                    <div class="col-xxl-1 col-xl-2 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <a href="javascript:void(0);" class="btn btn-xxs btn-light text-black">View</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="px-3 py-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row align-items-center">
+                                    <div class="col-xl-6 col-lg-12 mb-3 mb-xl-0">
+                                      <h6 class="fs-15 mb-0">User Module Testing</h6>
+                                    </div>
+                                    <div class="col-xl-1 ms-auto col-sm-3 col-6">
+                                      <span class="badge badge-sm badge-light border-0">Phase 2.6 QA</span>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 col-6">
+                                      <div class="avatar-list avatar-list-stacked ms-3">
+                                        <div class="avatar avatar-sm bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center">A</div>
+                                        <div class="avatar avatar-sm bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center">R</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-1 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <span class="badge badge-sm badge-success light border-0">Completed</span>
+                                    </div>
+                                    <div class="col-xxl-1 col-xl-2 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <a href="javascript:void(0);" class="btn btn-xxs btn-light text-black">View</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-user"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">Mashable, a news website and blog, goes live</span>
+                                  <span class="fs-14 d-block">04:12 PM by <span class="text-primary">Jackson</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-link"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">05 New Project Files Uploaded</span>
+                                  <span class="fs-14 d-block">12:25 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="p-md-4 p-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row g-3">
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/pdf.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">Airplus Guideline</h6>
+                                          <span class="fs-13">1.5MB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/csv.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">FureStibe requirements</h6>
+                                          <span class="fs-13">9KB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/css.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">FureStibe styles</h6>
+                                          <span class="fs-13">52KB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-file-alt"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <a href="javascript:void(0);" class="text-primary fw-medium">jQuery.js</a> was merged into <strong>Google</strong> Task task </span>
+                                  <span class="fs-14 d-block">12:38 PM by <span class="text-primary">Jogn Walles</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-image"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">3 Dashboard concepts uploaded</span>
+                                  <span class="fs-14 d-block">1:56 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="p-md-4 p-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row g-3">
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen1.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen2.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen3.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Fold Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-credit-card"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">You have received your monthly Affiliate Fee</span>
+                                  <span class="fs-14 d-block">2:08 PM by <span class="text-primary">DexignZone Team</span>
+                                  </span>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-8">
+                                    <div class="alert alert-primary border-primary outline-dashed py-3 px-4 d-flex align-items-center mb-0 mt-3">
+                                      <i class="fa-solid fa-building-columns text-primary fs-30 align-self-start"></i>
+                                      <div class="mx-3">
+                                        <h6 class="fw-semibold mb-1">Withdraw Your Funds to Bank</h6>
+                                        <p class="fs-14 mb-0 text-black">Securely withdraw money to your bank account, with a $25 fee.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <a href="javascript:void(0);" class="text-primary fw-medium">jQuery.js</a> was merged into <strong>Google</strong> Task task </span>
+                                  <span class="fs-14 d-block">12:38 PM by <span class="text-primary">Jogn Walles</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2" class="nav-item">
+                      <a href="javascript:void(0);" ngbNavLink class="nav-link ms-1"> Month </a>
+                      <ng-template ngbNavContent>
+                        <div class="widget-timeline-icons pb-3">
+                          <ul class="timeline">
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">StumbleUpon is acquired by eBay.</span>
+                                  <span class="fs-14 d-block">3:30 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="px-3 py-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row align-items-center">
+                                    <div class="col-xxl-6 col-xl-5 col-lg-12 mb-3 mb-xl-0">
+                                      <h6 class="fs-15 mb-0">Meeting with customer</h6>
+                                    </div>
+                                    <div class="col-xl-1 ms-auto col-sm-3 col-6">
+                                      <span class="badge badge-sm badge-light border-0">UI Design</span>
+                                    </div>
+                                    <div class="col-xxl-2 col-sm-3 col-6">
+                                      <div class="avatar-list avatar-list-stacked ms-3">
+                                        <img src="assets/images/avatar/3.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                                        <img src="assets/images/avatar/4.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                                        <div class="avatar avatar-sm bg-blue text-white rounded-circle d-inline-flex align-items-center justify-content-center">S</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-1 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <span class="badge badge-sm badge-info light border-0">In Progress</span>
+                                    </div>
+                                    <div class="col-xxl-1 col-xl-2 col-sm-3 col-6 text-end mt-2 mt-sm-0">
+                                      <a href="javascript:void(0);" class="btn btn-xxs btn-light text-dark">View</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="px-3 py-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row align-items-center">
+                                    <div class="col-xxl-6 col-xl-5 col-lg-12 mb-3 mb-xl-0">
+                                      <h6 class="fs-15 mb-0">User Module Testing</h6>
+                                    </div>
+                                    <div class="col-xl-1 ms-auto col-sm-3 col-6">
+                                      <span class="badge badge-sm badge-light border-0">Phase 2.6 QA</span>
+                                    </div>
+                                    <div class="col-xxl-2 col-sm-3 col-6">
+                                      <div class="avatar-list avatar-list-stacked ms-3">
+                                        <div class="avatar avatar-sm bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center">A</div>
+                                        <div class="avatar avatar-sm bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center">R</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-1 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <span class="badge badge-sm badge-success light border-0">Completed</span>
+                                    </div>
+                                    <div class="col-xxl-1 col-xl-2 col-sm-3 col-6 text-end mt-2 mt-sm-0">
+                                      <a href="javascript:void(0);" class="btn btn-xxs btn-light text-dark">View</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-user"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">Mashable, a news website and blog, goes live</span>
+                                  <span class="fs-14 d-block">04:12 PM by <span class="text-primary">Jackson</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-file-alt"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <a href="javascript:void(0);" class="text-primary fw-medium">jQuery.js</a> was merged into <strong>Google</strong> Task task </span>
+                                  <span class="fs-14 d-block">12:38 PM by <span class="text-primary">Jogn Walles</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Fold Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-credit-card"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">You have received your monthly Affiliate Fee</span>
+                                  <span class="fs-14 d-block">2:08 PM by <span class="text-primary">DexignZone Team</span>
+                                  </span>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-8">
+                                    <div class="alert alert-primary border-primary outline-dashed py-3 px-4 d-flex align-items-center mb-0 mt-3">
+                                      <i class="fa-solid fa-building-columns text-primary fs-30 align-self-start"></i>
+                                      <div class="mx-3">
+                                        <h6 class="fw-semibold mb-1">Withdraw Your Funds to Bank</h6>
+                                        <p class="fs-14 mb-0 text-black">Securely withdraw money to your bank account, with a $25 fee.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <a href="javascript:void(0);" class="text-primary fw-medium">jQuery.js</a> was merged into <strong>Google</strong> Task task </span>
+                                  <span class="fs-14 d-block">12:38 PM by <span class="text-primary">Jogn Walles</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3" class="nav-item">
+                      <a href="javascript:void(0);" ngbNavLink class="nav-link ms-1"> Year </a>
+                      <ng-template ngbNavContent>
+                        <div class="widget-timeline-icons pb-3">
+                          <ul class="timeline">
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">StumbleUpon is acquired by eBay.</span>
+                                  <span class="fs-14 d-block">3:30 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="px-3 py-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row align-items-center">
+                                    <div class="col-xxl-6 col-xl-5 col-lg-12 mb-3 mb-xl-0">
+                                      <h6 class="fs-15 mb-0">Meeting with customer</h6>
+                                    </div>
+                                    <div class="col-xl-1 ms-auto col-sm-3 col-6">
+                                      <span class="badge badge-sm badge-light border-0">UI Design</span>
+                                    </div>
+                                    <div class="col-xxl-2 col-sm-3 col-6">
+                                      <div class="avatar-list avatar-list-stacked ms-3">
+                                        <img src="assets/images/avatar/3.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                                        <img src="assets/images/avatar/4.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                                        <div class="avatar avatar-sm bg-blue text-white rounded-circle d-inline-flex align-items-center justify-content-center">S</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-1 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <span class="badge badge-sm badge-info light border-0">In Progress</span>
+                                    </div>
+                                    <div class="col-xxl-1 col-xl-2 col-sm-3 col-6 text-end mt-2 mt-sm-0">
+                                      <a href="javascript:void(0);" class="btn btn-xxs btn-light text-dark">View</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="px-3 py-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row align-items-center">
+                                    <div class="col-xxl-6 col-xl-5 col-lg-12 mb-3 mb-xl-0">
+                                      <h6 class="fs-15 mb-0">User Module Testing</h6>
+                                    </div>
+                                    <div class="col-xl-1 ms-auto col-sm-3 col-6">
+                                      <span class="badge badge-sm badge-light border-0">Phase 2.6 QA</span>
+                                    </div>
+                                    <div class="col-xxl-2 col-sm-3 col-6">
+                                      <div class="avatar-list avatar-list-stacked ms-3">
+                                        <div class="avatar avatar-sm bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center">A</div>
+                                        <div class="avatar avatar-sm bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center">R</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-1 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <span class="badge badge-sm badge-success light border-0">Completed</span>
+                                    </div>
+                                    <div class="col-xxl-1 col-xl-2 col-sm-3 col-6 text-end mt-2 mt-sm-0">
+                                      <a href="javascript:void(0);" class="btn btn-xxs btn-light text-dark">View</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-user"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">Mashable, a news website and blog, goes live</span>
+                                  <span class="fs-14 d-block">04:12 PM by <span class="text-primary">Jackson</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-link"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">05 New Project Files Uploaded</span>
+                                  <span class="fs-14 d-block">12:25 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="p-md-4 p-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row g-3">
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/pdf.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">Airplus Guideline</h6>
+                                          <span class="fs-13">1.5MB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/csv.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">FureStibe requirements</h6>
+                                          <span class="fs-13">9KB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/css.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">FureStibe styles</h6>
+                                          <span class="fs-13">52KB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-file-alt"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <a href="javascript:void(0);" class="text-primary fw-medium">jQuery.js</a> was merged into <strong>Google</strong> Task task </span>
+                                  <span class="fs-14 d-block">12:38 PM by <span class="text-primary">Jogn Walles</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-image"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">3 Dashboard concepts uploaded</span>
+                                  <span class="fs-14 d-block">1:56 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="p-md-4 p-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row g-3">
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen1.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen2.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen3.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Fold Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-credit-card"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">You have received your monthly Affiliate Fee</span>
+                                  <span class="fs-14 d-block">2:08 PM by <span class="text-primary">DexignZone Team</span>
+                                  </span>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-8">
+                                    <div class="alert alert-primary border-primary outline-dashed py-3 px-4 d-flex align-items-center mb-0 mt-3">
+                                      <i class="fa-solid fa-building-columns text-primary fs-30 align-self-start"></i>
+                                      <div class="mx-3">
+                                        <h6 class="fw-semibold mb-1">Withdraw Your Funds to Bank</h6>
+                                        <p class="fs-14 mb-0 text-black">Securely withdraw money to your bank account, with a $25 fee.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <a href="javascript:void(0);" class="text-primary fw-medium">jQuery.js</a> was merged into <strong>Google</strong> Task task </span>
+                                  <span class="fs-14 d-block">12:38 PM by <span class="text-primary">Jogn Walles</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-image"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">3 Dashboard concepts uploaded</span>
+                                  <span class="fs-14 d-block">1:56 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="p-md-4 p-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row g-3">
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen1.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen2.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen3.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Fold Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-credit-card"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">You have received your monthly Affiliate Fee</span>
+                                  <span class="fs-14 d-block">2:08 PM by <span class="text-primary">DexignZone Team</span>
+                                  </span>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-8">
+                                    <div class="alert alert-primary border-primary outline-dashed py-3 px-4 d-flex align-items-center mb-0 mt-3">
+                                      <i class="fa-solid fa-building-columns text-primary fs-30 align-self-start"></i>
+                                      <div class="mx-3">
+                                        <h6 class="fw-semibold mb-1">Withdraw Your Funds to Bank</h6>
+                                        <p class="fs-14 mb-0 text-black">Securely withdraw money to your bank account, with a $25 fee.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4" class="nav-item">
+                      <a href="javascript:void(0);" ngbNavLink class="nav-link ms-1"> All </a>
+                      <ng-template ngbNavContent>
+                        <div class="widget-timeline-icons pb-3">
+                          <ul class="timeline">
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">StumbleUpon is acquired by eBay.</span>
+                                  <span class="fs-14 d-block">3:30 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="px-3 py-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row align-items-center">
+                                    <div class="col-xxl-6 col-xl-5 col-lg-12 mb-3 mb-xl-0">
+                                      <h6 class="fs-15 mb-0">Meeting with customer</h6>
+                                    </div>
+                                    <div class="col-xl-1 ms-auto col-sm-3 col-6">
+                                      <span class="badge badge-sm badge-light border-0">UI Design</span>
+                                    </div>
+                                    <div class="col-xxl-2 col-sm-3 col-6">
+                                      <div class="avatar-list avatar-list-stacked ms-3">
+                                        <img src="assets/images/avatar/3.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                                        <img src="assets/images/avatar/4.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                                        <div class="avatar avatar-sm bg-blue text-white rounded-circle d-inline-flex align-items-center justify-content-center">S</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-1 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <span class="badge badge-sm badge-info light border-0">In Progress</span>
+                                    </div>
+                                    <div class="col-xxl-1 col-xl-2 col-sm-3 col-6 text-end mt-2 mt-sm-0">
+                                      <a href="javascript:void(0);" class="btn btn-xxs btn-light text-dark">View</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="px-3 py-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row align-items-center">
+                                    <div class="col-xxl-6 col-xl-5 col-lg-12 mb-3 mb-xl-0">
+                                      <h6 class="fs-15 mb-0">User Module Testing</h6>
+                                    </div>
+                                    <div class="col-xl-1 ms-auto col-sm-3 col-6">
+                                      <span class="badge badge-sm badge-light border-0">Phase 2.6 QA</span>
+                                    </div>
+                                    <div class="col-xxl-2 col-sm-3 col-6">
+                                      <div class="avatar-list avatar-list-stacked ms-3">
+                                        <div class="avatar avatar-sm bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center">A</div>
+                                        <div class="avatar avatar-sm bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center">R</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-1 col-sm-3 col-6 mt-2 mt-sm-0">
+                                      <span class="badge badge-sm badge-success light border-0">Completed</span>
+                                    </div>
+                                    <div class="col-xxl-1 col-xl-2 col-sm-3 col-6 text-end mt-2 mt-sm-0">
+                                      <a href="javascript:void(0);" class="btn btn-xxs btn-light text-dark">View</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-user"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">Mashable, a news website and blog, goes live</span>
+                                  <span class="fs-14 d-block">04:12 PM by <span class="text-primary">Jackson</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-link"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">05 New Project Files Uploaded</span>
+                                  <span class="fs-14 d-block">12:25 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="p-md-4 p-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row g-3">
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/pdf.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">Airplus Guideline</h6>
+                                          <span class="fs-13">1.5MB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/csv.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">FureStibe requirements</h6>
+                                          <span class="fs-13">9KB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="me-3">
+                                          <img src="assets/images/files/css.png" width="35" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                          <h6 class="mb-0">FureStibe styles</h6>
+                                          <span class="fs-13">52KB</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-file-alt"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <a href="javascript:void(0);" class="text-primary fw-medium">jQuery.js</a> was merged into <strong>Google</strong> Task task </span>
+                                  <span class="fs-14 d-block">12:38 PM by <span class="text-primary">Jogn Walles</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-image"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">3 Dashboard concepts uploaded</span>
+                                  <span class="fs-14 d-block">1:56 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="p-md-4 p-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row g-3">
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen1.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen2.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen3.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Fold Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-credit-card"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">You have received your monthly Affiliate Fee</span>
+                                  <span class="fs-14 d-block">2:08 PM by <span class="text-primary">DexignZone Team</span>
+                                  </span>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-8">
+                                    <div class="alert alert-primary border-primary outline-dashed py-3 px-4 d-flex align-items-center mb-0 mt-3">
+                                      <i class="fa-solid fa-building-columns text-primary fs-30 align-self-start"></i>
+                                      <div class="mx-3">
+                                        <h6 class="fw-semibold mb-1">Withdraw Your Funds to Bank</h6>
+                                        <p class="fs-14 mb-0 text-black">Securely withdraw money to your bank account, with a $25 fee.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <a href="javascript:void(0);" class="text-primary fw-medium">jQuery.js</a> was merged into <strong>Google</strong> Task task </span>
+                                  <span class="fs-14 d-block">12:38 PM by <span class="text-primary">Jogn Walles</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-image"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">3 Dashboard concepts uploaded</span>
+                                  <span class="fs-14 d-block">1:56 PM by <span class="text-primary">You</span>
+                                  </span>
+                                </div>
+                                <div class="p-md-4 p-3 mt-3 border border-secondary border-opacity-10 rounded">
+                                  <div class="row g-3">
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen1.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen2.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                      <img src="assets/images/blog/screen3.jpg" alt="" class="w-100 rounded">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-book-open"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">
+                                    <strong>Hughes</strong> Fold Created & assigned a new task <a href="javascript:void(0);" class="text-primary">Design Multistep Registraion Form</a> to you </span>
+                                  <span class="fs-14 d-block">11:02 PM by <span class="text-primary">Hughes</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-media">
+                                <i class="las la-credit-card"></i>
+                              </div>
+                              <div class="timeline-panel">
+                                <div class="clearfix">
+                                  <span class="text-black fs-14 fw-semibold">You have received your monthly Affiliate Fee</span>
+                                  <span class="fs-14 d-block">2:08 PM by <span class="text-primary">DexignZone Team</span>
+                                  </span>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-8">
+                                    <div class="alert alert-primary border-primary outline-dashed py-3 px-4 d-flex align-items-center mb-0 mt-3">
+                                      <i class="fa-solid fa-building-columns text-primary fs-30 align-self-start"></i>
+                                      <div class="mx-3">
+                                        <h6 class="fw-semibold mb-1">Withdraw Your Funds to Bank</h6>
+                                        <p class="fs-14 mb-0 text-black">Securely withdraw money to your bank account, with a $25 fee.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </ng-template>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content" id="myTabContent">
+
+                <div [ngbNavOutlet]="nav1"></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-3 col-xl-4">
+          <div class="row sticky-top sticky-top-80 z-0">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header border-0">
+                  <h4 class="heading mb-0">My To Do Items</h4>
+                  <div>
+                    <a href="javascript:void(0);" class="text-primary me-2">View All</a>
+                    <a href="javascript:void(0);" class="text-black"> + Add To Do</a>
+                  </div>
+                </div>
+                <div class="card-body p-0 pb-2">
+                  <app-my-to-do-list [data]="to_do_list"></app-my-to-do-list>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title mb-0">Activity</h4>
+                </div>
+                <div class="card-body">
+                  <div class="widget-timeline-status">
+                    <ul class="timeline">
+                      <li>
+                        <span class="timeline-status">08:30</span>
+                        <div class="timeline-badge border-dark"></div>
+                        <div class="timeline-panel">
+                          <span>Quisque a consequat ante Sit amet magna at volutapt.</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="timeline-status">10:30</span>
+                        <div class="timeline-badge border-success"></div>
+                        <div class="timeline-panel">
+                          <span class="text-black fs-14 fw-semibold">Video Sharing</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="timeline-status">02:42</span>
+                        <div class="timeline-badge border-danger"></div>
+                        <div class="timeline-panel">
+                          <span class="text-black fs-14 fw-semibold">john just buy your product Sell <span class="text-primary">$250</span>
+                          </span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="timeline-status">15:40</span>
+                        <div class="timeline-badge border-info"></div>
+                        <div class="timeline-panel">
+                          <span>Mashable, a news website and blog, goes live.</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="timeline-status">23:12</span>
+                        <div class="timeline-badge border-warning"></div>
+                        <div class="timeline-panel">
+                          <span class="text-black fs-14 fw-semibold">StumbleUpon is acquired by <span class="text-primary">eBay</span>
+                          </span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="timeline-status">11:12</span>
+                        <div class="timeline-badge border-primary"></div>
+                        <div class="timeline-panel">
+                          <span>shared this on my fb wall a few months back.</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

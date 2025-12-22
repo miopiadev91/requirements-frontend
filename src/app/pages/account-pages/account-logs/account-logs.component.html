@@ -1,0 +1,154 @@
+<div class="content-body default-height">
+  <!-- Breadcrumb  -->
+  <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+  <div class="container-fluid">
+
+    <app-account-overview-head></app-account-overview-head>
+    <div class="tab-content" id="tabContentMyProfileBottom">
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="card">
+            <div class="card-header border-0 py-3">
+              <h4 class="heading mb-0">Logs</h4>
+              <div class="d-flex align-items-center">
+                <app-dropdown [dropdown]="dropdown_item" class="me-1"></app-dropdown>
+                <button class="btn btn-sm btn-primary ms-2">View All</button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table mb-4 table-striped-thead table-wide table-sm table-border-last-0">
+                  <thead>
+                    <tr>
+                      <th>Status</th>
+                      <th>URL</th>
+                      <th class="text-end">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="badge badge-sm badge-success light border-0">OK</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary ">POST/project/Qerza/5482344/not_found</a>
+                      </td>
+                      <td class="text-end text-nowrap">20 Dec 2024, 2:40 pm</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="badge badge-sm badge-danger light border-0">ERROR</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary">POST/project/Qerza/5482344/invalid</a>
+                      </td>
+                      <td class="text-end text-nowrap">25 Jul 2024, 5:30 pm</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="badge badge-sm badge-danger light border-0">ERROR</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary">POST/project/Qerza/5482344/payment</a>
+                      </td>
+                      <td class="text-end text-nowrap">20 Dec 2024, 2:40 pm</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="badge badge-sm badge-success light border-0">OK</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary">POST/project/Qerza/5482344/not_found</a>
+                      </td>
+                      <td class="text-end text-nowrap">21 Feb 2024, 2:40 pm</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="badge badge-sm badge-success light border-0">OK</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary">POST/project/Qerza/5482344/not_found</a>
+                      </td>
+                      <td class="text-end text-nowrap">25 Jul 2024, 5:30 pm</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="badge badge-sm badge-danger light border-0">ERROR</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary">POST/project/Qerza/5482344/not_found</a>
+                      </td>
+                      <td class="text-end text-nowrap">20 Dec 2024, 2:40 pm</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="badge badge-sm badge-success light border-0">OK</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary">POST/project/Qerza/5482344/payment</a>
+                      </td>
+                      <td class="text-end text-nowrap">20 Dec 2024, 2:40 pm</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="badge badge-sm badge-success light border-0">OK</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary">POST/project/Qerza/5482344/not_found</a>
+                      </td>
+                      <td class="text-end text-nowrap">25 Jul 2024, 5:30 pm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card">
+            <div class="card-header border-0 py-3">
+              <h4 class="heading mb-0">Login Sessions</h4>
+              <div id="tableLogsExcelBTN"></div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive active-projects dataTables_wrapper">
+                <table matSort class="table table-striped-thead table-wide table-sm" id="tableLicenseUsage"  (matSortChange)="sortData($event)">
+                  <thead>
+                    <tr>
+                      <th mat-sort-header="location">Location</th>
+                      <th mat-sort-header="status">Status</th>
+                      <th mat-sort-header="device">Device</th>
+                      <th mat-sort-header="ip_address">IP Address</th>
+                      <th mat-sort-header="created" class="text-end">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for(item of allData.data; track item){
+                    <tr role="row" class="odd">
+                      <td class="sorting_1">{{ item.location }}</td>
+                      <td>
+                        <span
+                          class="badge badge-sm badge-{{ item.status == 'ERROR'?'danger':'success'}} light border-0">{{ item.status }}</span>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0);" class="text-primary text-nowrap">{{ item.device }}</a>
+                      </td>
+                      <td>{{ item.ip_address }}</td>
+                      <td class="text-end text-nowrap">{{ item.created }}</td>
+                    </tr>
+                    }
+                  </tbody>
+                </table>
+                <div class="dataTables_info" id="example5_info" role="status" aria-live="polite">Showing {{page}} to
+                  {{totalRows}} of {{ allData.total }} entries</div>
+                <div class="dataTables_paginate">
+                  <app-pagination [totalPage]="totalPage" [page]="page" (newPage)="pageChange($event)"></app-pagination>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

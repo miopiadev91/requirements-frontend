@@ -1,0 +1,50 @@
+<div class="content-body default-height">
+  <!-- Breadcrumb  -->
+  <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+  <div class="container-fluid">
+
+    <app-profile-overview-head></app-profile-overview-head>
+
+    <div class="tab-content" id="tabContentMyProfileBottom">
+      <div class="row">
+        @for(item of UserList; track item; let i = $index){
+        <div class="col-xl-3 col-sm-6">
+          <div class="card">
+            <div class="card-body text-center p-4">
+              <div class="mx-auto d-inline-block position-relative mb-3">
+                @if(item.image){
+                  <img src="{{ item.image }}" alt="" class="rounded-circle avatar avatar-lg">
+                  <span class="fa fa-circle bored border-light text-success position-absolute bottom-0 end-0 mb-0 me-1 fs-12"></span>
+                } @else{
+                  <div class="avatar avatar-lg bg-info-light text-info rounded-circle mx-auto d-flex align-items-center justify-content-center">
+                    {{item.name.split(" ")[0] && item.name.split(" ")[0][0]}}{{item.name.split(" ")[1] && item.name.split(" ")[1][0]}}
+                  </div>
+                  <span class="fa fa-circle bored border-light text-success position-absolute bottom-0 end-0 mb-0 me-1 fs-12"></span>
+                }
+              </div>
+              <div class="media-body mb-4">
+                <h4 class="mb-1">
+                  <a href="javascript:void(0);" class="text-black">{{ item.name }}</a>
+                </h4>
+                <p class="mb-0 fs-15">{{ item.desc }}</p>
+              </div>
+              <div class="d-flex justify-content-center px-3">
+                <div class="body-bg rounded px-3 py-2 text-start mx-2 flex-grow-1">
+                  <h6 class="mb-0 text-dark">{{ item.avg_deal }}</h6>
+                  <span class="fs-13">Avg. Deal</span>
+                </div>
+                <div class="body-bg rounded px-3 py-2 text-start mx-2 flex-grow-1">
+                  <h6 class="mb-0 text-dark">{{ item.deals }}</h6>
+                  <span class="fs-13">Deals</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-sm btn-light btn-follow me-1 mt-4" [class.active]="item.isFollowActive"  (click)="toggleFollow(i)">
+                <i [class]="item.isFollowActive ? 'la la-check me-1 fs-14' : 'la la-user me-1 fs-14'"></i>{{ item.isFollowActive ? 'Following' : 'Follow' }} </button>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

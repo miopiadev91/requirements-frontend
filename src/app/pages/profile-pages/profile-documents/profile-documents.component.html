@@ -1,0 +1,79 @@
+<div class="content-body default-height">
+  <!-- Breadcrumb  -->
+  <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+  <div class="container-fluid">
+    <app-profile-overview-head></app-profile-overview-head>
+
+    <div class="tab-content" id="tabContentMyProfileBottom">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">Documents</h5>
+        <div class="d-flex align-items-center">
+          <ul class="nav nav-pills" id="myTabView" role="tablist">
+            <li class="nav-item ms-1" role="presentation">
+              <button class="nav-link btn btn-light btn-sharp p-0 active" id="project-list-tab" data-bs-toggle="tab" data-bs-target="#project-list-pane" type="button" role="tab" aria-controls="project-list-pane" aria-selected="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+              </button>
+            </li>
+            <li class="nav-item ms-1" role="presentation">
+              <button class="nav-link btn btn-light btn-sharp p-0" id="project-grid-tab" data-bs-toggle="tab" data-bs-target="#project-grid-pane" type="button" role="tab" aria-controls="project-grid-pane" aria-selected="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-content" id="myTabContentView">
+        <div class="tab-pane fade show active" id="project-list-pane" role="tabpanel" aria-labelledby="project-list-tab" tabindex="0">
+          <div class="row">
+            @for(item of DocumentsList; track  item){
+            <div class="col-xxl-2 col-xl-3 col-md-4 col-sm-6">
+              <div class="card">
+                <div class="card-body px-4 py-3 d-flex align-items-center gap-3">
+                  <div>
+                    <img src="{{ item.image }}" width="45" alt="">
+                  </div>
+                  <div class="clearfix">
+                    <h6 class="mb-0">{{ item.title }}</h6>
+                    <span class="fs-14">{{ item.SubTitle }} </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+        <div class="tab-pane fade" id="project-grid-pane" role="tabpanel" aria-labelledby="project-grid-tab" tabindex="0">
+          <div class="row">
+            @for(item of DocumentsList; track  item){
+            <div class="col-xl-2 col-lg-4 col-sm-6">
+              <div class="card">
+                <div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+                  <div class="m-auto pb-3">
+                    <img src="{{ item.image }}" alt="">
+                  </div>
+                  <div class="clearfix">
+                    <h5 class="mb-0">{{ item.title }}</h5>
+                    <span class="fs-14">{{ item.SubTitle }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

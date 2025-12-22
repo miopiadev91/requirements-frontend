@@ -1,0 +1,27 @@
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide *ngFor="let item of data">
+    <div class="items">
+      <div class="card product-grid-card">
+        <div class="card-body">
+          <div class="new-arrival-product">
+            <div class="new-arrivals-img-contnent">
+              <img class="img-fluid" src="{{ item.img }}" alt="">
+            </div>
+            <div class="new-arrival-content text-center mt-3">
+              <h4><a routerLink="/admin/ecom-product-detail">{{ item.title }}</a></h4>
+              <ul class="star-rating">
+                @for(starRow of [0, 1, 2, 3, 4]; track starRow; let i = $index;){
+                  @if((item?.ratings || 0) > i){
+                    <li><i class="fa fa-star" [ngClass]="{'me-0': i === 4, 'me-1': i !== 4}"></i></li>
+                  }
+                }
+              </ul>
+              <span class="price">{{ item.price | currency:'USD'}}</span>
+              <del class="discount ms-1">${{ item.discount }}</del>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</owl-carousel-o>

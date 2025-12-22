@@ -1,0 +1,74 @@
+<div class="content-body">
+    <!-- Breadcrumb  -->
+    <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-responsive active-projects manage-client dataTables_wrapper">
+                        <div class="tbl-caption">
+                            <h4 class="heading mb-0">Generated Report</h4>
+                        </div>
+                            <table matSort (matSortChange)="sortData($event)" id="reports-tbl" class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th mat-sort-header="invoice">Invoice #</th>
+                                        <th mat-sort-header="customer">Customer</th>
+                                        <th mat-sort-header="date">Date</th>
+                                        <th mat-sort-header="due_date">Due Date</th>
+                                        <th mat-sort-header="amount">Amount</th>
+                                        <th mat-sort-header="discount">Discount</th>
+                                        <th mat-sort-header="amount_open">Amount Open</th>
+                                        <th mat-sort-header="adjustment">Adjustment</th>
+                                        <th mat-sort-header="status">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for(item of allData.data; track item){
+                                    <tr>
+                                        <td>
+                                            <a href="javascript:void(0)" class="text-primary">{{ item.invoice }}</a>
+                                        </td>
+                                        <td><span>{{ item.customer }}y</span></td>
+                                        <td>
+                                            <span>{{ item.date }}</span>
+                                        </td>
+                                        <td>
+                                            <span>{{ item.due_date }}</span>
+                                        </td>	
+                                        <td>
+                                            <span class="text-secondary">{{ item.amount }} $</span>
+                                        </td>
+                                        <td>
+                                            <span class="text-secondary">{{ item.discount }} $</span>
+                                        </td>
+                                        <td>
+                                            <span class="text-secondary">{{ item.amount_open }} $</span>
+                                        </td>
+                                        <td>
+                                            <span class="text-secondary">{{ item.adjustment }}.00</span>
+                                        </td>
+                                        <td>
+                                            @if(item.status == 'Pending'){
+                                            <span class="badge badge-danger light border-0">{{ item.status }}</span>
+                                            } @else {
+                                                <span class="badge badge-success light border-0">{{ item.status }}</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="dataTables_info" id="example5_info" role="status" aria-live="polite">Showing {{page}} to
+                                {{totalRows}} of {{ allData.total }} entries</div>
+                            <div class="dataTables_paginate paging_simple_numbers pt-2">
+                            <app-pagination [totalPage]="totalPage" [page]="page" (newPage)="pageChange($event)"></app-pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

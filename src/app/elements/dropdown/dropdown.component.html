@@ -1,0 +1,36 @@
+
+<div class="custom-dropdown dropdown bootstrap-select default-select status-select m-0" class="{{style_status ? 'style-2':'normal-select'}}">
+    <button type="button" tabindex="-1" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-1" [ngStyle]="style_status ? {'display': 'ruby-text'} : {'display': 'flex'}"
+        aria-haspopup="listbox" aria-expanded="false" title="{{ selectValue }}" class="btn dropdown-toggle btn-light">
+        <div class="filter-option">
+            <div class="filter-option-inner">
+                <div class="filter-option-inner-inner">
+                    @if(getValueImg){
+                    @for(item of getValue; track item; let i = $index){
+                    @if(selectValue == item){
+                    <img src="{{ getValueImg[i]}}">
+                    }
+                    }
+                    }
+                    {{ selectValue }}
+                </div>
+            </div>
+        </div>
+    </button>
+    <div class="dropdown-menu dropdown-menu-end" style="min-width: 100%;">
+        <ul class="" role="presentation">
+            @for(item of getValue; track item; let i = $index){
+            <li class="">
+                <a href="javascript:void(0);" (click)="getValueDrop({ item })"
+                    [ngClass]="{'active':selectValue == item}" class="dropdown-item">
+                    <span class="text">
+                        @if(getValueImg){
+                        <img src="{{ getValueImg[i]}}">
+                        }
+                        {{ item }}</span>
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+</div>

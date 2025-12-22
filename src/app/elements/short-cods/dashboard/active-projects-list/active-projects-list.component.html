@@ -1,0 +1,69 @@
+<table matSort (matSortChange)="sortData($event)" id="projects-tbl" class="table ItemsCheckboxSec">
+    <thead>
+        <tr>
+            <th>
+                <div class="form-check custom-checkbox ms-0">
+                    <input type="checkbox" class="form-check-input checkAllInput" id="checkAll" (click)="checkUncheckAll()">
+                    <label class="form-check-label" for="checkAll"></label>
+                </div>
+            </th>
+            <th mat-sort-header="projectName">Project Name</th>
+            <th mat-sort-header="userName">Project Lead</th>
+            <th mat-sort-header="progress">Progress</th>
+            <th >Assignee</th>
+            <th mat-sort-header="status">Status</th>
+            <th mat-sort-header="due_date">Due Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(item of allData.data; track item){
+        <tr>
+            <td>
+                <div class="form-check custom-checkbox">
+                    <input type="checkbox" class="form-check-input" id="customCheckBox2" [checked]="boxActive">
+                    <label class="form-check-label" for="customCheckBox2"></label>
+                </div>
+            </td>
+            <td>{{ item.projectName }}</td>
+            <td>
+                <div class="d-flex align-items-center">
+                    <img src="{{ item.userImage }}" class="avatar rounded-circle" alt="">
+                    <p class="mb-0 ms-2">{{ item.userName }}</p>
+                </div>
+            </td>
+            <td class="pe-0">
+                <div class="tbl-progress-box">
+                    <div class="progress">
+                        <div class="progress-bar bg-{{ item.status }}" [style.width.%]="item.progress" style="height:5px; border-radius:4px;" role="progressbar"></div>
+                    </div>
+                    <span class="text-{{ item.status }}">{{ item.progress}}%</span>
+                </div>
+            </td>
+            <td class="pe-0">
+                <div class="avatar-list avatar-list-stacked">
+                    <img *ngFor="let img of item.assignee; trackBy: trackByFn" [src]="img" class="avatar rounded-circle" alt="">
+                </div>
+            </td>
+            <td class="pe-0">
+                @if(item.status == 'success'){
+                    <span class="badge badge-success light border-0">Completed</span>
+                    } @else if (item.status == 'warning'){
+                    <span class="badge badge-warning light border-0">Pending</span>
+                    } @else if(item.status == 'danger'){
+                      <span class="badge badge-danger light border-0">Testing</span>
+                    } @else {
+                    <span class="badge badge-primary light border-0">In Progress</span>
+                    }
+            </td>
+            <td>
+                <span>{{ item.due_date}}</span>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<div class="dataTables_info" id="example5_info" role="status" aria-live="polite">Showing {{page}} to
+    {{totalRows}} of {{ allData.total }} entries</div>
+<div class="dataTables_paginate paging_simple_numbers pt-2">
+<app-pagination [totalPage]="totalPage" [page]="page" (newPage)="pageChange($event)"></app-pagination>
+</div>

@@ -1,0 +1,50 @@
+<div class="alert alert-dismissible ai-header-alert fade show {{data.alert_desc == null?'mb-5':'mb-4'}}"> 
+    {{ data.alert_msg}} 
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="btn-close">
+    <svg class="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_58_5949)">
+        <path d="M10.0003 18.3337C14.6027 18.3337 18.3337 14.6027 18.3337 10.0003C18.3337 5.39795 14.6027 1.66699 10.0003 1.66699C5.39795 1.66699 1.66699 5.39795 1.66699 10.0003C1.66699 14.6027 5.39795 18.3337 10.0003 18.3337Z" stroke="#FF5B5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M12.5 7.5L7.5 12.5" stroke="#FF5B5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7.5 7.5L12.5 12.5" stroke="#FF5B5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+        <clipPath id="clip0_58_5949">
+            <rect width="20" height="20" fill="white" />
+        </clipPath>
+        </defs>
+    </svg>
+    </button>
+</div>
+
+@if(data.alert_desc){
+    <p> {{ data.alert_desc }}</p>
+}
+<ul class="nav nav-tabs style-1 mb-4" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/auto-writer" class="nav-link border-s-1 {{ currentUrl=='/admin/aikit/auto-writer'?'active':'' }}">Auto Writer</a>
+    </li>
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/scheduled" class="nav-link {{ currentUrl=='/admin/aikit/scheduled'?'active':'' }}">Scheduled</a>
+    </li>
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/repurpose" class="nav-link {{ currentUrl=='/admin/aikit/repurpose'?'active':'' }}">Repurpose</a>
+    </li>
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/rss" class="nav-link {{ currentUrl=='/admin/aikit/rss'?'active':'' }}">RSS</a>
+    </li>
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/chatbot" class="nav-link {{ currentUrl=='/admin/aikit/chatbot'?'active':'' }}">Chatbot</a>
+    </li>
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/fine-tune-models" class="nav-link {{ currentUrl=='/admin/aikit/fine-tune-models'?'active':'' }}">Fine-tune Models</a>
+    </li>
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/prompt" class="nav-link {{ currentUrl=='/admin/aikit/prompt'?'active':'' }}">AI Menu Prompts</a>
+    </li>
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/setting" class="nav-link {{ currentUrl=='/admin/aikit/setting'?'active':'' }}">Settings</a>
+    </li>
+    <li class="nav-item" role="presentation">
+    <a routerLink="/admin/aikit/import" class="nav-link border-s-2 {{ currentUrl=='/admin/aikit/import'?'active':'' }}">Export/Import Settings</a>
+    </li>
+</ul>

@@ -1,0 +1,53 @@
+<div class="card-body schedules-cal p-2">
+    <div class="upcoming-date">
+    <ngb-datepicker #dp 
+        [(ngModel)]="model" 
+        (navigate)="date = $event.next" 
+        [navigation]="navigation"
+        [outsideDays]="outsideDays"/>
+    </div>
+    <div class="events">
+        <h6>events</h6>
+        <div class="dz-scroll event-scroll">
+            <div class="event-media">
+                <div class="d-flex align-items-center">
+                    <div class="event-box">
+                        <h5 class="mb-0">20</h5>
+                        <span>Mon</span>
+                    </div>
+                    <div class="event-data ms-2">
+                        <h5 class="mb-0"><a href="javascript:void(0)">Development planning</a></h5>
+                        <span>w3it Technologies</span>
+                    </div>
+                </div>
+                <span class="text-secondary">12:05 PM</span>
+            </div>
+            <div class="event-media">
+                <div class="d-flex align-items-center">
+                    <div class="event-box">
+                        <h5 class="mb-0">20</h5>
+                        <span>Mon</span>
+                    </div>
+                    <div class="event-data ms-2">
+                        <h5 class="mb-0"><a href="javascript:void(0)">Development planning</a></h5>
+                        <span>w3it Technologies</span>
+                    </div>
+                </div>
+                <span class="text-secondary">12:05 PM</span>
+            </div>
+            <div class="event-media">
+                <div class="d-flex align-items-center">
+                    <div class="event-box">
+                        <h5 class="mb-0">20</h5>
+                        <span>Mon</span>
+                    </div>
+                    <div class="event-data ms-2">
+                        <h5 class="mb-0"><a href="javascript:void(0)">Development planning</a></h5>
+                        <span>w3it Technologies</span>
+                    </div>
+                </div>
+                <span class="text-secondary">12:05 PM</span>
+            </div>
+        </div>
+    </div>
+</div>

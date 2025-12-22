@@ -1,0 +1,32 @@
+<div class="total-earning">
+    <h2>$6,743.00</h2>
+    <ul class="nav nav-underline mb-3 earning-tab earning-chart" id="pills-tab1" role="tablist">
+        <li class="nav-item px-2" role="presentation">
+            <button class="nav-link py-2 px-0 border-3 m-0 active" (click)="updateSeries('day')" data-series="day" id="pills-day-tab1" data-bs-toggle="pill" data-bs-target="#pills-day1" type="button" role="tab" aria-selected="true">Day</button>
+        </li>
+        <li class="nav-item px-2" role="presentation">
+            <button class="nav-link py-2 px-0 border-3 m-0" (click)="updateSeries('week')" id="pills-week-tab1" data-series="week" data-bs-toggle="pill" data-bs-target="#pills-week1" type="button" role="tab" aria-selected="false">Week</button>
+        </li>
+        <li class="nav-item px-2" role="presentation">
+            <button class="nav-link py-2 px-0 border-3 m-0" (click)="updateSeries('month')" id="pills-month-tab1" data-series="month" data-bs-toggle="pill" data-bs-target="#pills-month1" type="button" role="tab" aria-selected="false">Month</button>
+        </li>
+        <li class="nav-item px-2" role="presentation">
+            <button class="nav-link py-2 px-0 border-3 m-0" (click)="updateSeries('year')" id="pills-year-tab1" data-series="year" data-bs-toggle="pill" data-bs-target="#pills-year1" type="button" role="tab" aria-selected="false">Year</button>
+        </li>
+    </ul>
+    <div id="earningChart" #chartContainer>
+        <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [colors]="chartOptions.colors"
+            [dataLabels]="chartOptions.dataLabels"
+            [legend]="chartOptions.legend"
+            [stroke]="chartOptions.stroke"
+            [grid]="chartOptions.grid"
+            [yaxis]="chartOptions.yaxis"
+            [xaxis]="chartOptions.xaxis"
+            [fill]="chartOptions.fill"
+            [tooltip]="chartOptions.tooltip">
+        </apx-chart>
+    </div>
+</div>

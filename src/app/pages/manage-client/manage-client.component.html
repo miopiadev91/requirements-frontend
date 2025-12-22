@@ -1,0 +1,68 @@
+<div class="content-body">
+      <!-- Breadcrumb  -->
+      <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-responsive active-projects manage-client dataTables_wrapper">
+                        <div class="tbl-caption">
+                            <h4 class="heading mb-0">Manage Client</h4>
+                        </div>
+                            <table matSort (matSortChange)="sortData($event)" id="reports-tbl" class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th mat-sort-header="name">Name</th>
+                                        <th mat-sort-header="user_name">User Name</th>
+                                        <th mat-sort-header="contact">Contact</th>
+                                        <th mat-sort-header="gender">Gender</th>
+                                        <th mat-sort-header="location">Location</th>
+                                        <th mat-sort-header="status">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for(item of allData.data; track item){
+                                    <tr>
+                                        <td>
+                                            <div class="products">
+                                                <img src="{{ item.image }}" class="avatar avatar-md" alt="">
+                                                <div>
+                                                    <h6>{{ item.name }}</h6>
+                                                    <span>Web Designer</span>	
+                                                </div>	
+                                            </div>
+                                        </td>
+                                        <td><span class="text-primary">{{ item.user_name }}</span></td>
+                                        <td>
+                                            <span>{{ item.contact }}</span>
+                                        </td>
+                                        <td>
+                                            <span>{{ item.gender }}</span>
+                                        </td>	
+                                        <td>
+                                            <span>{{ item.location }}</span>
+                                        </td>
+                                        <td>
+                                            @if(item.status == 'Inactive'){
+                                                <span class="badge badge-danger light border-0">{{ item.status }}</span>
+                                            } @else {
+                                                <span class="badge badge-success light border-0">{{ item.status }}</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="dataTables_info" id="example5_info" role="status" aria-live="polite">Showing {{page}} to
+                                {{totalRows}} of {{ allData.total }} entries</div>
+                            <div class="dataTables_paginate paging_simple_numbers pt-2">
+                            <app-pagination [totalPage]="totalPage" [page]="page" (newPage)="pageChange($event)"></app-pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

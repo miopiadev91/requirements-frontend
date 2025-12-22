@@ -1,0 +1,44 @@
+<div class="content-title" (click)="dropicon(1)" data-bs-toggle="collapse" data-bs-target="#filter">
+    <div class="cpa">
+        <i class="fa-sharp fa-solid fa-filter me-2"></i>Filter
+    </div>
+    <div class="tools">
+        <a href="javascript:void(0);" class="expand SlideToolHeader"
+            [ngClass]="{'expand':activeToggleArray.indexOf(1) > -1 }"><i class="fa fa-angle-down"></i>
+        </a>
+    </div>
+</div>
+<div class="cm-content-body form excerpt collapse show" id="filter">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-xl-3 col-sm-6">
+          <input type="text" class="form-control mb-xl-0 mb-3" placeholder="Title">
+        </div>
+        <div class="col-xl-3  col-sm-6 mb-3 mb-xl-0">
+          <app-select2 [items]="selectStatus"></app-select2>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+          <div class="data-picker-costem costem-set input-hasicon">
+            <input
+                (click)="d.toggle()"
+                class="form-control"
+                placeholder="yyyy-mm-dd"
+                name="dp"
+                [(ngModel)]="model"
+                ngbDatepicker
+                #d="ngbDatepicker"
+                [navigation]="navigation"
+                [outsideDays]="outsideDays"
+            />
+            <div class="icon"(click)="d.toggle()" ><i class="far fa-calendar"></i></div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+          <button class="btn btn-primary me-1" title="Click here to Search" type="button"><i class="fa-sharp fa-solid fa-filter me-1"></i>Filter</button>
+          <button class="btn btn-danger light" title="Click here to remove filter" type="button">Remove Filter</button>
+        </div>
+      </div>
+    </div>
+
+</div>
+

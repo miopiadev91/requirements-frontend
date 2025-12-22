@@ -1,0 +1,65 @@
+<div class="table-responsive active-projects active-projects ItemsCheckboxSec selling-product shorting dataTables_wrapper">
+    <table matSort (matSortChange)="sortData($event)" id="product-tbl" class="table ">
+        <thead>
+            <tr>
+                <th>
+                    <div class="form-check custom-checkbox ms-0">
+                        <input type="checkbox" class="form-check-input checkAllInput" id="checkAll1" (click)="checkUncheckAll()">
+                        <label class="form-check-label" for="checkAll1"></label>
+                    </div>
+                </th>
+                <th mat-sort-header="projectName">Product Name</th>
+                <th mat-sort-header="price">Price</th>
+                <th mat-sort-header="orders">Orders</th>
+                <th mat-sort-header="status">Stock</th>
+                <th mat-sort-header="amount">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(item of allData.data; track item){
+            <tr>
+                <td>
+                    <div class="form-check custom-checkbox">
+                        <input type="checkbox" class="form-check-input" id="customCheckBox220" [checked]="boxActive">
+                        <label class="form-check-label" for="customCheckBox220"></label>
+                    </div>
+                </td>
+                <td>
+                    <div class="products">
+                        <img src="{{ item.projectImage }}" class="avatar avatar-md" alt="">
+                        <div>
+                            <h6><a href="javascript:void(0)">{{ item.projectName }}</a></h6>
+                            <span>{{ item.due_date }}</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <span class="text-primary">{{ item.price | currency:'USD' }}</span>
+                </td>
+                <td>
+                    <span>{{ item.orders }}</span>
+                </td>
+                <td>
+                    @if(item.status == 'success'){
+                    <span class="badge badge-success light border-0">In Stock</span>
+                    } @else if (item.status == 'warning'){
+                    <span class="badge badge-warning light border-0">Pending</span>
+                    } @else if(item.status == 'danger'){
+                        <span class="badge badge-danger light border-0">Out of Stock</span>
+                    } @else {
+                    <span class="badge badge-primary light border-0">In Stock</span>
+                    }
+                </td>
+                <td>
+                    <span>{{ item.amount | currency:'USD'}}</span>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <div class="dataTables_info" id="example5_info" role="status" aria-live="polite">Showing {{page}} to
+        {{totalRows}} of {{ allData.total }} entries</div>
+    <div class="dataTables_paginate paging_simple_numbers pt-2">
+    <app-pagination [totalPage]="totalPage" [page]="page" (newPage)="pageChange($event)"></app-pagination>
+    </div>
+</div>

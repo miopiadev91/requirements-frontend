@@ -1,0 +1,238 @@
+<div class="content-body default-height">
+    <!-- Breadcrumb  -->
+    <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+    <div class="container-fluid">
+    
+    <app-account-overview-head></app-account-overview-head>
+    
+      <div class="tab-content" id="tabContentMyProfileBottom">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="heading mb-0">Referral Program</h4>
+              </div>
+              <div class="card-body">
+                <div class="row mb-3">
+                  <div class="col-lg-6 mb-3">
+                    <h6 class="mb-1 fw-semibold">How to use Referral Program</h6>
+                    <p class="fs-14">Elevate your post: Integrate images/ for impact, smooth flow, humor, and clarity on complex subjects</p>
+                    <a href="javascript:void(0);" class="btn btn-light text-dark">Get Started</a>
+                  </div>
+                  <div class="col-lg-6 mb-3">
+                    <h6 class="mb-1 fw-semibold">Your Referral Link</h6>
+                    <p class="fs-14">Craft your blog post: Choose a topic, outline, research, and fact-check diligently</p>
+                    <div class="select-text-wrap">
+                      <div class="text-select-copy border border-secondary border-opacity-10 px-3 py-2 rounded mb-3 text-primary">https://dexginzoen.com/reffer/</div>
+                      <button type="button" class="btn btn-light btn-select-text">Copy Link</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="bg-purple-light rounded p-3 text-center">
+                      <h3 class="mb-0 fw-semibold">$62,250.0</h3>
+                      <span class="fs-14 text-purple">Net Earnings</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="bg-success-light rounded p-3 text-center">
+                      <h3 class="mb-0 fw-semibold">$7,325.00</h3>
+                      <span class="fs-14 text-success">Balance</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="bg-danger-light rounded p-3 text-center">
+                      <h3 class="mb-0 fw-semibold">$5,500</h3>
+                      <span class="fs-14 text-danger">Avg Deal Size</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="bg-primary-light rounded p-3 text-center">
+                      <h3 class="mb-0 fw-semibold">780</h3>
+                      <span class="fs-14 text-primary">Referral Signups</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <p class="fs-14 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div class="alert alert-outline-light body-bg bg-opacity-25 outline-dashed p-3 d-sm-flex align-items-center">
+                  <i class="fa-solid fa-building-columns text-primary fs-24 align-self-start"></i>
+                  <div class="mx-sm-3 my-3 my-sm-0">
+                    <h6 class="fw-semibold mb-1">Withdraw Your Funds to Bank</h6>
+                    <p class="fs-14 mb-0">Securely withdraw money to your bank account, with a $25 fee.</p>
+                  </div>
+                  <div class="clearfix flex-shrink-0 ms-sm-auto">
+                    <a href="javascript:void(0);" class="btn btn-primary">Withdraw Money</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="card h-auto">
+              <div class="card-header border-0 py-3 d-block d-sm-flex">
+                <h4 class="heading mb-0">Referred Users</h4>
+                <ul class="nav nav-pills mt-3 mt-sm-0" ngbNav #nav1="ngbNav" [(activeId)]="active">
+                    <li [ngbNavItem]="1" class="nav-item ms-1">
+                        <a href="javascript:void(0);" ngbNavLink class="nav-link btn-light"> Week </a>
+                        <ng-template ngbNavContent>
+                            <div class="tab-pane active" id="tabWeek2" role="tabpanel" aria-labelledby="week-tab2" tabindex="0">
+                                <div class="table-responsive">
+                                  <table class="table mb-1 table-striped-thead table-wide table-sm table-border-last-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Order ID</th>
+                                        <th>User</th>
+                                        <th>Date</th>
+                                        <th>Bonus</th>
+                                        <th class="text-end">Profit</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for(item of billing_history_week; track item){
+                                        <tr>
+                                            <td>{{ item.order_id}}</td>
+                                            <td class="text-nowrap">{{ item.user }}</td>
+                                            <td class="text-nowrap">{{ item.date }}</td>
+                                            <td>{{ item.bonus | currency:'USD' }}</td>
+                                            <td class="text-end">
+                                            @if (item.profit < 0) {
+                                                <span class="text-danger">{{ item.profit | currency:'USD' }}</span>
+                                              } @else {
+                                                <span class="text-success">{{ item.profit | currency:'USD' }}</span>
+                                              }
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2" class="nav-item ms-1">
+                        <a href="javascript:void(0);" ngbNavLink class="nav-link btn-light"> Month </a>
+                        <ng-template ngbNavContent>
+                            <div class="tab-pane active" id="tabWeek2" role="tabpanel" aria-labelledby="week-tab2" tabindex="0">
+                                <div class="table-responsive">
+                                  <table class="table mb-1 table-striped-thead table-wide table-sm table-border-last-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Order ID</th>
+                                        <th>User</th>
+                                        <th>Date</th>
+                                        <th>Bonus</th>
+                                        <th class="text-end">Profit</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for(item of billing_history_month; track item){
+                                        <tr>
+                                            <td>{{ item.order_id}}</td>
+                                            <td class="text-nowrap">{{ item.user }}</td>
+                                            <td class="text-nowrap">{{ item.date }}</td>
+                                            <td>{{ item.bonus | currency:'USD' }}</td>
+                                            <td class="text-end">
+                                            @if (item.profit < 0) {
+                                                <span class="text-danger">{{ item.profit | currency:'USD' }}</span>
+                                              } @else {
+                                                <span class="text-success">{{ item.profit | currency:'USD' }}</span>
+                                              }
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3" class="nav-item ms-1">
+                        <a href="javascript:void(0);" ngbNavLink class="nav-link btn-light"> Year </a>
+                        <ng-template ngbNavContent>
+                            <div class="tab-pane active" id="tabWeek2" role="tabpanel" aria-labelledby="week-tab2" tabindex="0">
+                                <div class="table-responsive">
+                                  <table class="table mb-1 table-striped-thead table-wide table-sm table-border-last-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Order ID</th>
+                                        <th>User</th>
+                                        <th>Date</th>
+                                        <th>Bonus</th>
+                                        <th class="text-end">Profit</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for(item of billing_history_year; track item){
+                                        <tr>
+                                            <td>{{ item.order_id}}</td>
+                                            <td class="text-nowrap">{{ item.user }}</td>
+                                            <td class="text-nowrap">{{ item.date }}</td>
+                                            <td>{{ item.bonus | currency:'USD' }}</td>
+                                            <td class="text-end">
+                                            @if (item.profit < 0) {
+                                                <span class="text-danger">{{ item.profit | currency:'USD' }}</span>
+                                              } @else {
+                                                <span class="text-success">{{ item.profit | currency:'USD' }}</span>
+                                              }
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4" class="nav-item ms-1">
+                        <a href="javascript:void(0);" ngbNavLink class="nav-link btn-light"> All </a>
+                        <ng-template ngbNavContent>
+                            <div class="tab-pane active" id="tabWeek2" role="tabpanel" aria-labelledby="week-tab2" tabindex="0">
+                                <div class="table-responsive">
+                                  <table class="table mb-1 table-striped-thead table-wide table-sm table-border-last-0">
+                                    <thead>
+                                      <tr>
+                                        <th>Order ID</th>
+                                        <th>User</th>
+                                        <th>Date</th>
+                                        <th>Bonus</th>
+                                        <th class="text-end">Profit</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for(item of billing_history_all; track item){
+                                        <tr>
+                                            <td>{{ item.order_id}}</td>
+                                            <td class="text-nowrap">{{ item.user }}</td>
+                                            <td class="text-nowrap">{{ item.date }}</td>
+                                            <td>{{ item.bonus | currency:'USD' }}</td>
+                                            <td class="text-end">
+                                            @if (item.profit < 0) {
+                                                <span class="text-danger">{{ item.profit | currency:'USD' }}</span>
+                                              } @else {
+                                                <span class="text-success">{{ item.profit | currency:'USD' }}</span>
+                                              }
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                        </ng-template>
+                    </li>
+                </ul>
+              </div>
+              <div class="card-body p-0">
+                <div class="tab-content">
+                    <div [ngbNavOutlet]="nav1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

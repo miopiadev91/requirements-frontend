@@ -1,0 +1,62 @@
+<div class="content-body">
+    <!-- Breadcrumb  -->
+    <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-responsive active-projects manage-client dataTables_wrapper">
+                            <div class="tbl-caption">
+                                <h4 class="heading mb-0">Performance Indicators</h4>
+                            </div>
+                            <table matSort (matSortChange)="sortData($event)" id="empoloyees-tblwrapper" class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th mat-sort-header="title">Title</th>
+                                        <th mat-sort-header="designation">Designation</th>
+                                        <th mat-sort-header="amount">Rating</th>
+                                        <th mat-sort-header="added_by">Added By</th>
+                                        <th mat-sort-header="created_date">Created Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for(item of allData.data; track item){
+                                    <tr>
+                                        <td>
+                                            <a href="javascript:void(0)">{{ item.title }}</a>
+                                        </td>
+                                        <td><span>{{ item.designation }}</span></td>
+                                        <td>
+                                            <ng-container *ngFor="let star of [].constructor(getValidRating(item.rating)); let i = index">
+                                                <i class="fa-sharp fa-solid fa-star text-orange me-1"></i>
+                                            </ng-container>
+                                              
+                                            <!-- Additional icons for half-stars -->
+                                            <i *ngIf="item.rating % 1 !== 0" class="fa-solid fa-star-half-stroke text-orange me-1"></i>
+                                        
+                                            <span>{{ item.rating }}</span>
+                                        </td>
+                                        <td>
+                                            <span>{{ item.added_by }}</span>
+                                        </td>
+                                        <td>
+                                            <span>{{ item.created_date }}</span>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="dataTables_info" id="example5_info" role="status" aria-live="polite">Showing
+                                {{page}} to {{totalRows}} of {{ allData.total }} entries</div>
+                            <div class="dataTables_paginate paging_simple_numbers pt-2">
+                                <app-pagination [totalPage]="totalPage" [page]="page"  (newPage)="pageChange($event)"></app-pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

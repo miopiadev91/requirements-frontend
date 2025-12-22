@@ -1,0 +1,93 @@
+<div class="content-body default-height">
+    <!-- Breadcrumb  -->
+    <app-breadcrumb [breadcrumb]="breadcrumbList"> </app-breadcrumb>
+    <div class="container-fluid">
+        
+      <app-account-overview-head></app-account-overview-head>
+
+      <div class="tab-content" id="tabContentMyProfileBottom">
+        <div class="row">
+          <div class="col-xl-8">
+            <div class="card">
+              <div class="card-header border-0">
+                <h4 class="heading mb-0">API Keys</h4>
+                <button class="btn btn-sm btn-primary">Create A Key</button>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table mb-1 table-striped-thead table-wide table-md table-border-last-0">
+                    <thead>
+                      <tr>
+                        <th>Label</th>
+                        <th>API Keys</th>
+                        <th>Created</th>
+                        <th>Status</th>
+                        <th class="text-end">Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @for(item of data; track  item){ 
+                      <tr>
+                        <td>none set</td>
+                        <td>
+                          <div class="select-text-wrap d-flex justify-content-between">
+                            <div class="text-select-copy">{{ item.API_keys }}</div>
+                            <button class="btn-select-text btn p-0 border-0 ms-4">
+                              <i class="las la-copy fs-4"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="text-nowrap">{{ item.created }}</td>
+                        <td>
+                          @if(item.status == 'Active'){
+                            <span class="badge badge-sm badge-success light border-0">{{ item.status }}</span>
+                          } @else if(item.status == 'Review'){
+                            <span class="badge badge-sm badge-info light border-0">{{ item.status }}</span>
+                          } @else if(item.status == 'Inactive'){
+                            <span class="badge badge-sm badge-danger light border-0">{{ item.status }}</span>
+                          }
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown">
+                            <button class="btn btn-sm btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Options </button>
+                            <ul class="dropdown-menu mw-w100 dropdown-menu-end">
+                              <li>
+                                <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="heading mb-0">API Overview</h4>
+              </div>
+              <div class="card-body p-0">
+                <div class="clearfix border-bottom p-4 border-dark border-opacity-10">
+                  <h6>How to set API</h6>
+                  <p class="fs-14">Elevate your post: Integrate images/ for impact, smooth flow, humor, and clarity on complex subjects</p>
+                  <a href="javascript:void(0);" class="btn btn-light text-dark">Get Started</a>
+                </div>
+                <div class="clearfix p-4">
+                  <h6>Developer Tools</h6>
+                  <p class="fs-14">Craft your blog post: Choose a topic, outline, research, and fact-check diligently.</p>
+                  <a href="javascript:void(0);" class="btn btn-light text-dark">Create CLI Rule</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
