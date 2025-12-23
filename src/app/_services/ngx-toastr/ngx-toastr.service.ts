@@ -9,16 +9,16 @@ export class NgxToastrService {
 
   constructor(private toastr: ToastrService) { }
 
-  success(msg: any, position: any) {
-    this.toastr.success('This Is success Message!', msg, { positionClass: position });
+  success(message: string, title?: string, position = 'toast-top-right') {
+    this.toastr.success(message, title, { positionClass: position });
   }
-  error(msg: any, position: any) {
-    this.toastr.error('This Is error Message !', msg, { positionClass: position });
+  error(message: string, title?: string, position = 'toast-top-right') {
+    this.toastr.error(message, title, { positionClass: position });
   }
-  warning(msg: any, position: any) {
-    this.toastr.warning('This Is warning Message!', msg, { positionClass: position });
+  warning(message: string, title?: string, position = 'toast-top-right') {
+    this.toastr.warning(message, title, { positionClass: position });
   }
-  info(msg: any, position: any) {
-    this.toastr.info('This Is Info Message !', msg, { positionClass: position });
+  info(message: string, title?: string, position = 'toast-top-right') {
+    this.toastr.info(message, title, { positionClass: position });
   }
 }

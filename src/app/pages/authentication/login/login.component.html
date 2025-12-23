@@ -7,15 +7,16 @@
             <h3 class="title">Iniciar Sesión</h3>
             <p>Sistema de requerimientos</p>
           </div>
-          <form ngNoForm [action]="url">
+          <form [formGroup]="loginForm" ngNoForm (ngSubmit)="onLogin()">
             <div class="mb-4">
               <label class="mb-1 text-dark">Usuario</label>
-              <input type="email" class="form-control form-control">
+              <input type="text" class="form-control form-control" formControlName="email">
             </div>
             <div class="mb-4 position-relative">
               <label class="mb-1 text-dark">Contraseña</label>
               <div class="position-relative">
-                <input type="password" class="form-control" [type]="hide_show ? 'text' : 'password'">
+                <input type="password" class="form-control" formControlName="password"
+                  [type]="hide_show ? 'text' : 'password'">
                 <span class="show-pass eye" (click)="passwordHide()" [ngClass]="{'active':hide_show}">
                   <i class="fa fa-eye-slash"></i>
                   <i class="fa fa-eye"></i>
@@ -25,7 +26,7 @@
             <div class="form-row d-flex justify-content-between mt-4 mb-2">
               <div class="mb-4">
                 <div class="form-check custom-checkbox mb-3">
-                  <input type="checkbox" class="form-check-input" id="customCheckBox1" required="">
+                  <input type="checkbox" class="form-check-input" id="customCheckBox1">
                   <label class="form-check-label" for="customCheckBox1">Recordar contraseña</label>
                 </div>
               </div>
