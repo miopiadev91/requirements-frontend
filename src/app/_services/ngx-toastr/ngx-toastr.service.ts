@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, inject, Injectable } from '@angular/core';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 export class NgxToastrService {
 
-  constructor(private toastr: ToastrService) { }
+  private toastr = inject(ToastrService)
 
   success(message: string, title?: string, position = 'toast-top-right') {
     this.toastr.success(message, title, { positionClass: position });

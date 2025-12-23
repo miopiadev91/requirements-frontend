@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { AuthService } from '../../pages/authentication/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +20,8 @@ export class HeaderComponent {
   fullScreenClass: boolean = false;
   toggleMode: 'dark' | 'light' | undefined;
   localData: string | null = '';
+
+  public authService = inject(AuthService)
 
   constructor(private router: Router, private route: ActivatedRoute) {
     this.route.queryParams.subscribe((params: any) => {
@@ -97,5 +100,9 @@ export class HeaderComponent {
       }
       this.fullScreenClass = false;
     }
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 }

@@ -48,7 +48,7 @@ export class LoginComponent {
     this.authService.login(email, password, mac)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
-        next: (response: any) => {
+        next: (user: any) => {
           this.toastrService.success('Credenciales correctas', 'Bienvenid@')
           this.router.navigate(['/admin'])
         },
