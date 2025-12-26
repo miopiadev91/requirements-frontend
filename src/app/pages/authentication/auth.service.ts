@@ -21,7 +21,11 @@ export class AuthService {
   constructor() {
     const savedUser = localStorage.getItem(this.USER_KEY);
     if (savedUser) {
-      this.currentUser.set(JSON.parse(savedUser))
+      try {
+        this.currentUser.set(JSON.parse(savedUser))
+      } catch (error) {
+        localStorage.removeItem(this.USER_KEY)
+      }
     }
   }
 
@@ -31,7 +35,7 @@ export class AuthService {
       .pipe(
         tap(response => {
           if (response && response.access_token) {
-            this.saveSession(response.acess_token, response.user);
+            this.saveSession(response.access_token, response.user);
           }
         })
       )
@@ -40,6 +44,8 @@ export class AuthService {
   private saveSession(access_token: string, user: any): void {
     localStorage.setItem(this.TOKEN_KEY, access_token);
     localStorage.setItem(this.USER_KEY, JSON.stringify(user));
+
+    this.currentUser.set(user)
   }
 
   logout(): void {
@@ -51,5 +57,9 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return !!localStorage.getItem(this.TOKEN_KEY)
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem(this.TOKEN_KEY);
   }
 }
