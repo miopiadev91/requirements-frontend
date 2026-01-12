@@ -1,0 +1,8 @@
+services:
+  frontend:
+    container_name: requirements-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4202:80"
