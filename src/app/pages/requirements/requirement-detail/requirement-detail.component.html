@@ -1,0 +1,215 @@
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+<div class="container-fluid">
+  @if(loading) {
+    <div class="text-center py-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+  } @else if(requirement) {
+    <div class="row">
+      <!-- Info Principal -->
+      <div class="col-xl-8">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <div>
+              <span class="badge badge-{{ typeColors[requirement.type] }} light me-2">
+                {{ typeLabels[requirement.type] }}
+              </span>
+              <span class="fw-bold">{{ requirement.code }}</span>
+            </div>
+            <div>
+              <a routerLink="/admin/requirements" class="btn btn-outline-secondary btn-sm me-2">
+                <i class="fa-solid fa-arrow-left"></i> Volver
+              </a>
+              <button class="btn btn-outline-danger btn-sm" (click)="deleteRequirement()">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="mb-3">{{ requirement.title }}</h3>
+
+            <div class="row mb-4">
+              <div class="col-md-3">
+                <small class="text-muted d-block">Estado</small>
+                <span class="badge badge-{{ statusColors[requirement.status] }} badge-lg">
+                  {{ statusLabels[requirement.status] }}
+                </span>
+              </div>
+              <div class="col-md-3">
+                <small class="text-muted d-block">Prioridad</small>
+                <span class="badge badge-{{ priorityColors[requirement.priority] }}">
+                  {{ priorityLabels[requirement.priority] }}
+                </span>
+              </div>
+              <div class="col-md-3">
+                <small class="text-muted d-block">Solicitante</small>
+                <span>{{ requirement.requestedBy }}</span>
+              </div>
+              <div class="col-md-3">
+                <small class="text-muted d-block">Asignado a</small>
+                <span>{{ requirement.assignedTo || 'Sin asignar' }}</span>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h6 class="text-muted mb-2">Descripción</h6>
+              <p class="mb-0" style="white-space: pre-wrap;">{{ requirement.description }}</p>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <small class="text-muted d-block">Fecha de creación</small>
+                <span>{{ requirement.createdAt | date:'dd/MM/yyyy HH:mm' }}</span>
+              </div>
+              <div class="col-md-4">
+                <small class="text-muted d-block">Última actualización</small>
+                <span>{{ requirement.updatedAt | date:'dd/MM/yyyy HH:mm' }}</span>
+              </div>
+              @if(requirement.dueDate) {
+                <div class="col-md-4">
+                  <small class="text-muted d-block">Fecha límite</small>
+                  <span>{{ requirement.dueDate | date:'dd/MM/yyyy' }}</span>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Comentarios -->
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">Comentarios</h5>
+          </div>
+          <div class="card-body">
+            @if(requirement.comments && requirement.comments.length > 0) {
+              <div class="timeline-list">
+                @for(comment of requirement.comments; track comment.id) {
+                  <div class="d-flex mb-3 pb-3 border-bottom">
+                    <div class="avatar avatar-sm bg-primary rounded-circle me-3 d-flex align-items-center justify-content-center">
+                      <span class="text-white">{{ comment.userName.charAt(0) }}</span>
+                    </div>
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between">
+                        <strong>{{ comment.userName }}</strong>
+                        <small class="text-muted">{{ comment.createdAt | date:'dd/MM/yyyy HH:mm' }}</small>
+                      </div>
+                      <p class="mb-0 mt-1">{{ comment.text }}</p>
+                    </div>
+                  </div>
+                }
+              </div>
+            } @else {
+              <p class="text-muted text-center mb-0">No hay comentarios aún</p>
+            }
+
+            <!-- Nuevo comentario -->
+            <div class="mt-3">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Escribe un comentario..."
+                  [(ngModel)]="newComment" (keyup.enter)="addComment()">
+                <button class="btn btn-primary" type="button" (click)="addComment()"
+                  [disabled]="!newComment.trim()">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel Lateral - Workflow -->
+      <div class="col-xl-4">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">Flujo de Trabajo</h5>
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <small class="text-muted d-block mb-2">Estado actual</small>
+              <span class="badge badge-{{ statusColors[requirement.status] }} badge-lg">
+                {{ statusLabels[requirement.status] }}
+              </span>
+            </div>
+
+            @if(getAvailableTransitions().length > 0) {
+              <hr>
+              <small class="text-muted d-block mb-3">Acciones disponibles</small>
+              <div class="d-grid gap-2">
+                @for(transition of getAvailableTransitions(); track transition) {
+                  <button class="btn btn-{{ statusColors[transition] }}"
+                    (click)="changeStatus(transition)">
+                    @switch(transition) {
+                      @case('pending') {
+                        <i class="fa-solid fa-paper-plane me-2"></i> Enviar a revisión
+                      }
+                      @case('in_review') {
+                        <i class="fa-solid fa-eye me-2"></i> Iniciar revisión
+                      }
+                      @case('approved') {
+                        <i class="fa-solid fa-check me-2"></i> Aprobar
+                      }
+                      @case('rejected') {
+                        <i class="fa-solid fa-times me-2"></i> Rechazar
+                      }
+                      @case('in_progress') {
+                        <i class="fa-solid fa-play me-2"></i> Iniciar desarrollo
+                      }
+                      @case('completed') {
+                        <i class="fa-solid fa-flag-checkered me-2"></i> Marcar completado
+                      }
+                      @case('draft') {
+                        <i class="fa-solid fa-undo me-2"></i> Reabrir como borrador
+                      }
+                    }
+                  </button>
+                }
+              </div>
+            } @else {
+              <hr>
+              <p class="text-muted text-center mb-0">
+                @if(requirement.status === 'completed') {
+                  <i class="fa-solid fa-check-circle text-success me-2"></i>
+                  Este requerimiento está completado
+                } @else {
+                  No hay acciones disponibles
+                }
+              </p>
+            }
+          </div>
+        </div>
+
+        <!-- Info adicional -->
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">Información</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">ID</span>
+                <span>{{ requirement.id }}</span>
+              </li>
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Código</span>
+                <span class="fw-bold">{{ requirement.code }}</span>
+              </li>
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Tipo</span>
+                <span class="badge badge-{{ typeColors[requirement.type] }} light">
+                  {{ typeLabels[requirement.type] }}
+                </span>
+              </li>
+              <li class="d-flex justify-content-between py-2">
+                <span class="text-muted">Comentarios</span>
+                <span>{{ requirement.comments?.length || 0 }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>

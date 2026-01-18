@@ -1,0 +1,11 @@
+services:
+  app2:
+    container_name: requirements-frontend
+    expose:
+      - "80"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

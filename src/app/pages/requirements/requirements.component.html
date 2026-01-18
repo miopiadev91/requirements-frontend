@@ -1,0 +1,250 @@
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header border-0 pb-0 flex-wrap">
+          <h4 class="heading mb-0">Lista de Requerimientos</h4>
+          <div class="d-flex align-items-center">
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm"
+              (click)="openCreateModal(createModal)">
+              + Nuevo Requerimiento
+            </a>
+          </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="card-body pb-0">
+          <div class="row g-3 mb-3">
+            <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="Buscar..."
+                [(ngModel)]="searchTerm" (keyup.enter)="onSearch()">
+            </div>
+            <div class="col-md-2">
+              <select class="form-select" [(ngModel)]="filterStatus" (change)="onFilterChange()">
+                <option value="">Todos los estados</option>
+                @for(status of statusOptions; track status) {
+                  <option [value]="status">{{ statusLabels[status] }}</option>
+                }
+              </select>
+            </div>
+            <div class="col-md-2">
+              <select class="form-select" [(ngModel)]="filterPriority" (change)="onFilterChange()">
+                <option value="">Todas las prioridades</option>
+                @for(priority of priorityOptions; track priority) {
+                  <option [value]="priority">{{ priorityLabels[priority] }}</option>
+                }
+              </select>
+            </div>
+            <div class="col-md-2">
+              <select class="form-select" [(ngModel)]="filterType" (change)="onFilterChange()">
+                <option value="">Todos los tipos</option>
+                @for(type of typeOptions; track type) {
+                  <option [value]="type">{{ typeLabels[type] }}</option>
+                }
+              </select>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-secondary btn-sm me-2" (click)="onSearch()">
+                <i class="fa-solid fa-search"></i> Buscar
+              </button>
+              <button class="btn btn-outline-secondary btn-sm" (click)="clearFilters()">
+                <i class="fa-solid fa-times"></i> Limpiar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabla -->
+        <div class="card-body">
+          @if(loading) {
+            <div class="text-center py-4">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+              </div>
+            </div>
+          } @else {
+            <div class="table-responsive">
+              <table matSort (matSortChange)="sortData($event)" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th mat-sort-header="code">Código</th>
+                    <th mat-sort-header="title">Título</th>
+                    <th mat-sort-header="type">Tipo</th>
+                    <th mat-sort-header="priority">Prioridad</th>
+                    <th mat-sort-header="status">Estado</th>
+                    <th mat-sort-header="requestedBy">Solicitante</th>
+                    <th mat-sort-header="createdAt">Fecha</th>
+                    <th class="text-end">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for(item of allData.data; track trackByFn($index, item)) {
+                    <tr>
+                      <td>
+                        <span class="fw-bold text-primary">{{ item.code }}</span>
+                      </td>
+                      <td>
+                        <a [routerLink]="['/admin/requirements', item.id]" class="text-dark">
+                          {{ item.title }}
+                        </a>
+                      </td>
+                      <td>
+                        <span class="badge badge-{{ getTypeColor(item.type) }} light">
+                          {{ getTypeLabel(item.type) }}
+                        </span>
+                      </td>
+                      <td>
+                        <span class="badge badge-{{ getPriorityColor(item.priority) }}">
+                          {{ getPriorityLabel(item.priority) }}
+                        </span>
+                      </td>
+                      <td>
+                        <span class="badge badge-{{ getStatusColor(item.status) }}">
+                          {{ getStatusLabel(item.status) }}
+                        </span>
+                      </td>
+                      <td>{{ item.requestedBy }}</td>
+                      <td>{{ item.createdAt | date:'dd/MM/yyyy' }}</td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <button class="btn btn-sm btn-outline-primary dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Acciones
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a class="dropdown-item" [routerLink]="['/admin/requirements', item.id]">
+                                <i class="fa-solid fa-eye me-2"></i> Ver detalle
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="javascript:void(0)"
+                                (click)="openEditModal(createModal, item)">
+                                <i class="fa-solid fa-edit me-2"></i> Editar
+                              </a>
+                            </li>
+                            @if(getAvailableTransitions(item.status).length > 0) {
+                              <li><hr class="dropdown-divider"></li>
+                              <li class="dropdown-header">Cambiar estado a:</li>
+                              @for(transition of getAvailableTransitions(item.status); track transition) {
+                                <li>
+                                  <a class="dropdown-item" href="javascript:void(0)"
+                                    (click)="changeStatus(item, transition)">
+                                    <span class="badge badge-{{ getStatusColor(transition) }} me-2">
+                                      {{ getStatusLabel(transition) }}
+                                    </span>
+                                  </a>
+                                </li>
+                              }
+                            }
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                              <a class="dropdown-item text-danger" href="javascript:void(0)"
+                                (click)="deleteRequirement(item)">
+                                <i class="fa-solid fa-trash me-2"></i> Eliminar
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  } @empty {
+                    <tr>
+                      <td colspan="8" class="text-center py-4">
+                        <p class="text-muted mb-0">No se encontraron requerimientos</p>
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Paginación -->
+            @if(totalPage > 1) {
+              <div class="d-flex justify-content-end mt-3">
+                <app-pagination
+                  [totalPage]="totalPage"
+                  [page]="page"
+                  (newPage)="pageChange($event)">
+                </app-pagination>
+              </div>
+            }
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Crear/Editar -->
+<ng-template #createModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">
+      {{ isEditing ? 'Editar Requerimiento' : 'Nuevo Requerimiento' }}
+    </h5>
+    <button type="button" class="btn-close" aria-label="Close"
+      (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="requirementForm">
+      <div class="row">
+        <div class="col-12 mb-3">
+          <label class="form-label">Título <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" formControlName="title"
+            placeholder="Título del requerimiento">
+          @if(requirementForm.get('title')?.touched && requirementForm.get('title')?.errors) {
+            <small class="text-danger">El título es requerido (mínimo 3 caracteres)</small>
+          }
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Tipo <span class="text-danger">*</span></label>
+          <select class="form-select" formControlName="type">
+            @for(type of typeOptions; track type) {
+              <option [value]="type">{{ typeLabels[type] }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Prioridad <span class="text-danger">*</span></label>
+          <select class="form-select" formControlName="priority">
+            @for(priority of priorityOptions; track priority) {
+              <option [value]="priority">{{ priorityLabels[priority] }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Asignado a</label>
+          <input type="text" class="form-control" formControlName="assignedTo"
+            placeholder="Usuario asignado">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Fecha límite</label>
+          <input type="date" class="form-control" formControlName="dueDate">
+        </div>
+
+        <div class="col-12 mb-3">
+          <label class="form-label">Descripción <span class="text-danger">*</span></label>
+          <textarea class="form-control" formControlName="description" rows="4"
+            placeholder="Descripción detallada del requerimiento"></textarea>
+          @if(requirementForm.get('description')?.touched && requirementForm.get('description')?.errors) {
+            <small class="text-danger">La descripción es requerida</small>
+          }
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">
+      Cancelar
+    </button>
+    <button type="button" class="btn btn-primary" (click)="saveRequirement(modal)">
+      {{ isEditing ? 'Actualizar' : 'Crear' }}
+    </button>
+  </div>
+</ng-template>
