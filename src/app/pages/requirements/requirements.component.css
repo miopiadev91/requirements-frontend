@@ -1,0 +1,14 @@
+.table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.dropdown-header {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #6c757d;
+}

@@ -1,0 +1,14 @@
+.badge-lg {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+  font-size: 0.875rem;
+}
+
+.timeline-list .border-bottom:last-child {
+  border-bottom: none !important;
+}
