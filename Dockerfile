@@ -8,14 +8,6 @@ COPY . .
 RUN npm run build --configuration=production
 
 FROM nginx:alpine
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:Dockerfile.dev
-
-COPY --from=build /app/dist/w3crm/browser /usr/share/nginx/html
-=======
->>>>>>> dvalerio:Dockerfile
->>>>>>> main
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/dist/testing-deploy/browser /usr/share/nginx/html
+COPY --from=build /dist/w3crm/browser /usr/share/nginx/html
 EXPOSE 80
