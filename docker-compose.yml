@@ -1,5 +1,6 @@
 services:
   app2:
+    build: .
     container_name: requirements-frontend
     expose:
       - "80"
