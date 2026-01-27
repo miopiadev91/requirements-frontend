@@ -4,7 +4,7 @@ import { CalendarOptions, DateSelectArg, EventApi, EventClickArg } from '@fullca
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-calender',

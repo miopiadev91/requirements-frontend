@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AlignedLabelsComponent } from './aligned-labels/aligned-labels.component';
 import { AsynchronouslyLoadingTabContentsComponent } from './asynchronously-loading-tab-contents/asynchronously-loading-tab-contents.component';
 import { BasicTabGroupComponent } from './basic-tab-group/basic-tab-group.component';

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { NgbDateStruct, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePickerComponent } from './date-picker/date-picker.component';

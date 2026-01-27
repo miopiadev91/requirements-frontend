@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 

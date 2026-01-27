@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.component';
-import { NgxToastrService } from '../../_services/ngx-toastr/ngx-toastr.service';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
+import { NgxToastrService } from '../../core/services/ngx-toastr/ngx-toastr.service';
 
 @Component({
   selector: 'app-toastr',

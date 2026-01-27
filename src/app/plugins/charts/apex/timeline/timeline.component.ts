@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { TimelineAdvancedComponent } from './timeline-advanced/timeline-advanced.component';
 import { TimelineBasicComponent } from './timeline-basic/timeline-basic.component';
 import { TimelineDistributedComponent } from './timeline-distributed/timeline-distributed.component';

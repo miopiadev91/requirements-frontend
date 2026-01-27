@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { ProfileOverviewHeadComponent } from '../../../elements/short-cods/profile-account/profile-overview-head/profile-overview-head.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyToDoListComponent } from '../../../elements/short-cods/my-to-do-list/my-to-do-list.component';

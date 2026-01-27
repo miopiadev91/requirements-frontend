@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { DropdownBasicComponent } from './dropdown-basic/dropdown-basic.component';
 import { DropdownConfigComponent } from './dropdown-config/dropdown-config.component';
 import { DropdownContainerComponent } from './dropdown-container/dropdown-container.component';

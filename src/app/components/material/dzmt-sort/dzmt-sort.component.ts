@@ -8,7 +8,7 @@ export interface Dessert {
   name: string;
   protein: number;
 }
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-dzmt-sort',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { FilterHeadComponent } from '../../../elements/short-cods/cms/filter-head/filter-head.component';
 import { PaginationComponent } from '../../../elements/pagination/pagination.component';
 import { RouterLink } from '@angular/router';

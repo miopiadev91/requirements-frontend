@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicMenuComponent } from './basic-menu/basic-menu.component';
 import { MenuPositioningComponent } from './menu-positioning/menu-positioning.component';
 import { MenuWithIconComponent } from './menu-with-icon/menu-with-icon.component';

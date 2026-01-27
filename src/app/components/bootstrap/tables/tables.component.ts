@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { TableBasicComponent } from './table-basic/table-basic.component';
 import { TableBorderedComponent } from './table-bordered/table-bordered.component';
 import { TableBordered2Component } from './table-bordered2/table-bordered2.component';

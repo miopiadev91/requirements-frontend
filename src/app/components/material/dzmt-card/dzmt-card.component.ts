@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { CardBasicComponent } from './card-basic/card-basic.component';
 import { CardMultipleSectionsComponent } from './card-multiple-sections/card-multiple-sections.component';
 import { CardAlignmentOptionComponent } from './card-alignment-option/card-alignment-option.component';

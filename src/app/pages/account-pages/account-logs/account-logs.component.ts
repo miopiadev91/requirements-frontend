@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatSortModule, Sort } from '@angular/material/sort';
 import { PaginationComponent } from '../../../elements/pagination/pagination.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AccountOverviewHeadComponent } from '../../../elements/short-cods/profile-account/account-overview-head/account-overview-head.component';
 import { DropdownComponent } from '../../../elements/dropdown/dropdown.component';
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { BorderRadiusComponent } from './border-radius/border-radius.component';
 import { FloatingBarComponent } from './floating-bar/floating-bar.component';
 import { HorizontalChartjsComponent } from './horizontal-chartjs/horizontal-chartjs.component';

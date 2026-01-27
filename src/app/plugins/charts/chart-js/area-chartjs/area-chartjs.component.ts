@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { LineDatasetsChartComponent } from './line-datasets-chart/line-datasets-chart.component';
 import { LineDrawTimeChartComponent } from './line-draw-time-chart/line-draw-time-chart.component';
 import { LineStackedChartComponent } from './line-stacked-chart/line-stacked-chart.component';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Bubble3DComponent } from './bubble3-d/bubble3-d.component';
 import { BubbleSimpleComponent } from './bubble-simple/bubble-simple.component';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-bubble',

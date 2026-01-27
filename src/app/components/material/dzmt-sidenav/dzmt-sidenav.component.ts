@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AutosizeSidenavComponent } from './autosize-sidenav/autosize-sidenav.component';
 import { T } from '@angular/cdk/keycodes';
 import { DrawerExplicitBackdropSettingComponent } from './drawer-explicit-backdrop-setting/drawer-explicit-backdrop-setting.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-dzmt-sidenav',

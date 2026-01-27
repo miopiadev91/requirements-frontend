@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicLineChartComponent } from './basic-line-chart/basic-line-chart.component';
 import { BrushChartComponent } from './brush-chart/brush-chart.component';
 import { DashedLineChartComponent } from './dashed-line-chart/dashed-line-chart.component';

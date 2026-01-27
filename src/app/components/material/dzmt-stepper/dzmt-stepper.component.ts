@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { CustomStepperComponent } from './custom-stepper/custom-stepper.component';
 import { DisplaysErrorsInStepsComponent } from './displays-errors-in-steps/displays-errors-in-steps.component';
 import { EditableStepsComponent } from './editable-steps/editable-steps.component';

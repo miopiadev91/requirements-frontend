@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { ModalBasicComponent } from './modal-basic/modal-basic.component';
 import { ModalCenteredComponent } from './modal-centered/modal-centered.component';
 import { ModalGridComponent } from './modal-grid/modal-grid.component';

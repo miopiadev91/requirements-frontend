@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { InputBasicComponent } from './input-basic/input-basic.component';
 import { InputErrorStateMatcherComponent } from './input-error-state-matcher/input-error-state-matcher.component';
 import { InputInFormComponent } from './input-in-form/input-in-form.component';

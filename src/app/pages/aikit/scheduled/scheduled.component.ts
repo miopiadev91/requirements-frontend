@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSortModule, Sort } from '@angular/material/sort';
 import { PaginationComponent } from '../../../elements/pagination/pagination.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AikitHeadComponent } from '../../../elements/short-cods/aikit/aikit-head/aikit-head.component';
 
 export interface Dessert {
@@ -41,7 +41,7 @@ export class ScheduledComponent {
   constructor() {
     this.orderData = this.desserts.slice();
   }
-  
+
   ngOnInit(): void {
     this.allData = this.paginator(this.orderData, this.page, this.totalRows);
     this.totalPage = this.allData.total_pages;

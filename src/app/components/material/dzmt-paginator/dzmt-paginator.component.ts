@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicPaginatorComponent } from './basic-paginator/basic-paginator.component';
 import { ConfigurablePaginatorComponent } from './configurable-paginator/configurable-paginator.component';
 

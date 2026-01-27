@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AccountOverviewHeadComponent } from '../../../elements/short-cods/profile-account/account-overview-head/account-overview-head.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -26,7 +26,7 @@ export class AccountBillingComponent {
     currentURL: 'Billing',
   }
 
-  billing_history_week:type[] = [ 
+  billing_history_week:type[] = [
     {
       date: 'Nov 01, 2024',
       description: 'Invoice for Ocrober 2024',
@@ -58,7 +58,7 @@ export class AccountBillingComponent {
       amount: '$123.79'
     }
   ]
-  billing_history_month:type[]  = [ 
+  billing_history_month:type[]  = [
     {
       date: 'Nov 01, 2024',
       description: 'Invoice for Ocrober 2024',
@@ -85,7 +85,7 @@ export class AccountBillingComponent {
       amount: '$123.79'
     }
   ]
-  billing_history_year:type[]  = [ 
+  billing_history_year:type[]  = [
     {
       date: 'Nov 01, 2024',
       description: 'Invoice for Ocrober 2024',
@@ -112,7 +112,7 @@ export class AccountBillingComponent {
       amount: '$123.79'
     }
   ]
-  billing_history_all:type[]  = [ 
+  billing_history_all:type[]  = [
     {
       date: 'Nov 01, 2024',
       description: 'Invoice for Ocrober 2024',

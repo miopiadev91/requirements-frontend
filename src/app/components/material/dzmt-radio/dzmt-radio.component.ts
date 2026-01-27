@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { RadiosWithNgModelComponent } from './radios-with-ng-model/radios-with-ng-model.component';
 import { RadiosBasicComponent } from './radios-basic/radios-basic.component';
 

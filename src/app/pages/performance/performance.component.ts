@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatSortModule, Sort } from '@angular/material/sort';
-import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { PaginationComponent } from '../../elements/pagination/pagination.component';
 
@@ -61,7 +61,7 @@ export class PerformanceComponent {
       rating: 3,
       added_by: 'JCaty Fsa',
       created_date: '14 Feb 2024'
-    }, 
+    },
     {
       title: 'Ethan',
       designation: 'Website Engineer',
@@ -82,7 +82,7 @@ export class PerformanceComponent {
       rating: 3,
       added_by: 'John Marry',
       created_date: '14 Feb 2024'
-    }, 
+    },
     {
       title: 'Scott',
       designation: 'Software Engineer',
@@ -103,7 +103,7 @@ export class PerformanceComponent {
       rating: 3,
       added_by: 'JCaty Fsa',
       created_date: '14 Feb 2024'
-    }, 
+    },
     {
       title: 'Ethan',
       designation: 'Website Engineer',
@@ -145,7 +145,7 @@ export class PerformanceComponent {
       rating: 3,
       added_by: 'JCaty Fsa',
       created_date: '14 Feb 2024'
-    }, 
+    },
     {
       title: 'Ethan',
       designation: 'Website Engineer',

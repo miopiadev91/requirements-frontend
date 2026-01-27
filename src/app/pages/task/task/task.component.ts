@@ -3,7 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { RouterLink } from '@angular/router';
 import { Component, TemplateRef } from '@angular/core';
 import { MatSortModule, Sort } from '@angular/material/sort';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { PaginationComponent } from '../../../elements/pagination/pagination.component';
 import { DropdownComponent } from '../../../elements/dropdown/dropdown.component';
 

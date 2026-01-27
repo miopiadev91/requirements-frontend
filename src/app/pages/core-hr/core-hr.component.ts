@@ -1,7 +1,7 @@
 import { Component, TemplateRef } from '@angular/core';
 import { MatSortModule, Sort } from '@angular/material/sort';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
 import { EmployeesListComponent } from '../../elements/short-cods/dashboard/employees-list/employees-list.component';
 import { DropdownComponent } from '../../elements/dropdown/dropdown.component';
 import { BarChartApexComponent } from '../../elements/chart-config/bar-chart-apex/bar-chart-apex.component';

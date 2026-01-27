@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { PieDonutComponent } from './pie-donut/pie-donut.component';
 import { PieDonutWithPatternComponent } from './pie-donut-with-pattern/pie-donut-with-pattern.component';
 import { PieGradientDonutComponent } from './pie-gradient-donut/pie-gradient-donut.component';

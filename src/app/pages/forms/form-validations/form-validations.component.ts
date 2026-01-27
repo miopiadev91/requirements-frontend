@@ -3,7 +3,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Select2Data, Select2Module } from 'ng-select2-component';
 import { NgClass, TitleCasePipe } from '@angular/common';
 import { Select2Component } from '../../../plugins/select2/select2.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { FormGroup, FormBuilder, ReactiveFormsModule, FormsModule, Validators } from '@angular/forms';
 
 @Component({

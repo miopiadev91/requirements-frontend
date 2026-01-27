@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { BarBasicComponent } from './bar-basic/bar-basic.component';
 import { BarCustomDataLabelsComponent } from './bar-custom-data-labels/bar-custom-data-labels.component';
 import { BarGroupedComponent } from './bar-grouped/bar-grouped.component';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSortModule, Sort } from '@angular/material/sort';
 import { PaginationComponent } from '../../../elements/pagination/pagination.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { DropdownComponent } from '../../../elements/dropdown/dropdown.component';
 import { AikitHeadComponent } from '../../../elements/short-cods/aikit/aikit-head/aikit-head.component';
 import { Select2Component } from '../../../plugins/select2/select2.component';
@@ -73,7 +73,7 @@ export class FineTuneModelsComponent {
   constructor() {
     this.orderData = this.desserts.slice();
   }
-  
+
   ngOnInit(): void {
     this.allData = this.paginator(this.orderData, this.page, this.totalRows);
     this.totalPage = this.allData.total_pages;
@@ -177,7 +177,7 @@ export class FineTuneModelsComponent {
       created: '4:50 am July 11, 2024',
       status: 'Pending training data'
     },
-   
+
   ]
 
   orderData: Dessert[];

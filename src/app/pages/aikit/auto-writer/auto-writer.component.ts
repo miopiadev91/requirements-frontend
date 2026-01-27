@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AikitHeadComponent } from '../../../elements/short-cods/aikit/aikit-head/aikit-head.component';
 import { DropdownComponent } from '../../../elements/dropdown/dropdown.component';
 import { Select2Component } from '../../../plugins/select2/select2.component';
@@ -26,7 +26,7 @@ export class AutoWriterComponent {
     alert_msg:'This is a demo of AIKit plugin made for you to test the experience of using the plugin. Text & images/ generated in this demo are dummy. In real life, AIKit will call OpenAI API and generate relevant text and images/ based on your prompts.',
     alert_desc:'AIKit Auto Writer is a tool helps you write drafts quickly, but please review and edit before publishing for best results. This is not a substitute for human editing, but a drafting aid. Happy writing!'
   }
-  
+
   dropdown_item = {
     select: 'England',
     value: ['England', 'India', 'UAE'],

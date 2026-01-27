@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { ConfigurableSliderComponent } from './configurable-slider/configurable-slider.component';
 import { CustomThumbLabelFormattingComponent } from './custom-thumb-label-formatting/custom-thumb-label-formatting.component';
 import { SliderBasicComponent } from './slider-basic/slider-basic.component';

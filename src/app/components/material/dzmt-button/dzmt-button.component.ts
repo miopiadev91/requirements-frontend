@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { DzmtButtonBasicComponent } from './dzmt-button-basic/dzmt-button-basic.component';
 import { DzmtButtonVarietiesComponent } from './dzmt-button-varieties/dzmt-button-varieties.component';
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { ColumnBasicComponent } from './column-basic/column-basic.component';
 import { ColumnDataLabelsComponent } from './column-data-labels/column-data-labels.component';
 import { ColumnDistributedComponent } from './column-distributed/column-distributed.component';

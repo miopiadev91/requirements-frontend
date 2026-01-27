@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicCheckboxComponent } from './basic-checkbox/basic-checkbox.component';
 import { ConfigurableCheckboxComponent } from './configurable-checkbox/configurable-checkbox.component';
 import { CheckboxesWithReactiveFormsComponent } from './checkboxes-with-reactive-forms/checkboxes-with-reactive-forms.component';

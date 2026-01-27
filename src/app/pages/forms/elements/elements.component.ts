@@ -5,7 +5,7 @@ import { VerticalFormComponent } from './vertical-form/vertical-form.component';
 import { HorizontalFormComponent } from './horizontal-form/horizontal-form.component';
 import { Select2Component } from '../../../plugins/select2/select2.component';
 import { CustomSelect1Component } from './custom-select1/custom-select1.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-elements',

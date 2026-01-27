@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicProgressSpinnerComponent } from './basic-progress-spinner/basic-progress-spinner.component';
 import { ConfigurableProgressSpinnerComponent } from './configurable-progress-spinner/configurable-progress-spinner.component';
 

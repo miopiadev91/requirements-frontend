@@ -4,13 +4,13 @@ import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import { LightgalleryModule } from 'lightgallery/angular';
 import { RouterLink } from '@angular/router';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 @Component({
   selector: 'app-app-profile-2',
   standalone: true,
   imports: [
     BreadcrumbComponent,
-    LightgalleryModule, 
+    LightgalleryModule,
     RouterLink
   ],
   templateUrl: './app-profile-2.component.html',

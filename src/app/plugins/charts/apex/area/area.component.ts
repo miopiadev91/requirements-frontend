@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { AreaAreaStackedComponent } from './area-area-stacked/area-area-stacked.component';
 import { AreaBasicComponent } from './area-basic/area-basic.component';
 import { AreaIrregularTimeseriesComponent } from './area-irregular-timeseries/area-irregular-timeseries.component';

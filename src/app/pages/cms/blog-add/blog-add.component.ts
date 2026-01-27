@@ -5,7 +5,7 @@ import { NgClass } from '@angular/common';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { Select2Component } from '../../../plugins/select2/select2.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { PublishedComponent } from '../../../elements/short-cods/cms/published/published.component';
 @Component({
   selector: 'app-blog-add',

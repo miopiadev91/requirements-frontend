@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { WgTimeline1Component } from '../../../elements/widget/list/wg-timeline-1/wg-timeline-1.component';
 import { WgNotificationsComponent } from '../../../elements/widget/list/wg-notifications/wg-notifications.component';
 import { WgNotifications2Component } from '../../../elements/widget/list/wg-notifications-2/wg-notifications-2.component';

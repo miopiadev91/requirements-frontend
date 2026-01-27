@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AccountOverviewHeadComponent } from '../../../elements/short-cods/profile-account/account-overview-head/account-overview-head.component';
 import { BarChartApexComponent } from '../../../elements/chart-config/bar-chart-apex/bar-chart-apex.component';
 import { DropdownComponent } from '../../../elements/dropdown/dropdown.component';

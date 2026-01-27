@@ -1,6 +1,6 @@
 import { Component, TemplateRef } from '@angular/core';
 import { MatSliderModule } from '@angular/material/slider';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AikitHeadComponent } from '../../../elements/short-cods/aikit/aikit-head/aikit-head.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';

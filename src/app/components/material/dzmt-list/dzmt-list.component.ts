@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicListComponent } from './basic-list/basic-list.component';
 import { ListWithSectionsComponent } from './list-with-sections/list-with-sections.component';
 import { ListWithSelectionComponent } from './list-with-selection/list-with-selection.component';

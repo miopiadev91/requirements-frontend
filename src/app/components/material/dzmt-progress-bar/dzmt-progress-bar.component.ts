@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BufferProgressBarComponent } from './buffer-progress-bar/buffer-progress-bar.component';
 import { ConfigurableProgressBarComponent } from './configurable-progress-bar/configurable-progress-bar.component';
 import { DeterminateProgressBarComponent } from './determinate-progress-bar/determinate-progress-bar.component';

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicExpansionPanelComponent } from './basic-expansion-panel/basic-expansion-panel.component';
 import { ExpandCollapseAllTogglesComponent } from './expand-collapse-all-toggles/expand-collapse-all-toggles.component';
 import { ExpansionAsAccordionComponent } from './expansion-as-accordion/expansion-as-accordion.component';

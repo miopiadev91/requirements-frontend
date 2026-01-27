@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { PolarAreaBasicComponent } from './polar-area-basic/polar-area-basic.component';
 import { PolarAreaMonochromeComponent } from './polar-area-monochrome/polar-area-monochrome.component';
 

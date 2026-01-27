@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { RadialbarBasicComponent } from './radialbar-basic/radialbar-basic.component';
 import { RadialbarCustomAngleCircleComponent } from './radialbar-custom-angle-circle/radialbar-custom-angle-circle.component';
 import { RadialbarGradientComponent } from './radialbar-gradient/radialbar-gradient.component';

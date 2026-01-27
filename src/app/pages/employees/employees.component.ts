@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EmployeesListComponent } from '../../elements/short-cods/dashboard/employees-list/employees-list.component';
-import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-employees',

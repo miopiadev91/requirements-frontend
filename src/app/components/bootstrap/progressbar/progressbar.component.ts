@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { ProgressbarAnimatedComponent } from './progressbar-animated/progressbar-animated.component';
 import { ProgressbarAnimatedStripedComponent } from './progressbar-animated-striped/progressbar-animated-striped.component';
 import { ProgressbarColoredComponent } from './progressbar-colored/progressbar-colored.component';

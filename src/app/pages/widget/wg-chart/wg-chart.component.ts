@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AllSales1Component } from '../../../elements/widget/chart/all-sales-1/all-sales-1.component';
 import { AllSales2Component } from '../../../elements/widget/chart/all-sales-2/all-sales-2.component';
 import { StudentsChartComponent } from '../../../elements/widget/chart/students-chart/students-chart.component';

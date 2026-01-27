@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-blog-1',
@@ -12,7 +12,7 @@ import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.compon
 })
 export class Blog1Component {
 
-  
+
   breadcrumbList = {
     title: 'Dashboard',
     breadcrumb_path: 'Home',

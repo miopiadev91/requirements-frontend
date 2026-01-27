@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { DialogElementsComponent } from './dialog-elements/dialog-elements.component';
 import { DialogFromManuComponent } from './dialog-from-manu/dialog-from-manu.component';
 import { DialogOverviewComponent } from './dialog-overview/dialog-overview.component';

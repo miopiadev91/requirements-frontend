@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AlertBasicComponent } from './alert-basic/alert-basic.component';
 import { AlertSolidColorComponent } from './alert-solid-color/alert-solid-color.component';
 import { AlertSquareComponent } from './alert-square/alert-square.component';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CustomAccordionComponent } from './custom-accordion/custom-accordion.component';
 import { NgbAccordionConfig, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-accordion',

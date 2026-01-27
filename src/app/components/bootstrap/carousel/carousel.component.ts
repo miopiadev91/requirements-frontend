@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { CarouselBasicComponent } from './carousel-basic/carousel-basic.component';
 import { CarouselSlidesCaptionsComponent } from './carousel-slides-captions/carousel-slides-captions.component';
 import { CarouselSlidesIndicatorsComponent } from './carousel-slides-indicators/carousel-slides-indicators.component';

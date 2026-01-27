@@ -3,7 +3,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import { LightgalleryModule } from 'lightgallery/angular';
-import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-light-gallery',

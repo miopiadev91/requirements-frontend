@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { DropdownComponent } from '../../../elements/dropdown/dropdown.component';
 import { AikitHeadComponent } from '../../../elements/short-cods/aikit/aikit-head/aikit-head.component';
 import { Select2Component } from '../../../plugins/select2/select2.component';

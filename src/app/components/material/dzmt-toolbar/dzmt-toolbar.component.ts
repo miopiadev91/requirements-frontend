@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicToolbarComponent } from './basic-toolbar/basic-toolbar.component';
 import { MultiRowToolbarComponent } from './multi-row-toolbar/multi-row-toolbar.component';
 import { ToolbarOverviewComponent } from './toolbar-overview/toolbar-overview.component';

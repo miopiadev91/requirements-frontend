@@ -6,7 +6,7 @@ import { DzmtAutocompleteOptgroupComponent } from './dzmt-autocomplete-optgroup/
 import { DzmtAutocompleteOverviewComponent } from './dzmt-autocomplete-overview/dzmt-autocomplete-overview.component';
 import { DzmtAutocompletePlaneComponent } from './dzmt-autocomplete-plane/dzmt-autocomplete-plane.component';
 import { DzmtAutocompleteSimpleComponent } from './dzmt-autocomplete-simple/dzmt-autocomplete-simple.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { DzmtAutocompleteRequireComponent } from './dzmt-autocomplete-require/dzmt-autocomplete-require.component';
 
 @Component({

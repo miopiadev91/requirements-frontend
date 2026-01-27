@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AppearanceVariantsComponent } from './appearance-variants/appearance-variants.component';
 import { FieldThemingComponent } from './field-theming/field-theming.component';
 import { FieldWithErrorMessagesComponent } from './field-with-error-messages/field-with-error-messages.component';

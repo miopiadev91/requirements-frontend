@@ -4,7 +4,7 @@ import { Component, TemplateRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatSortModule, Sort } from '@angular/material/sort';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { PaginationComponent } from '../../../../elements/pagination/pagination.component';
 
 export interface Dessert {

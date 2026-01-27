@@ -1,0 +1,230 @@
+<div class="profile-tab">
+  <div class="custom-tab-1">
+    <ul class="nav nav-tabs" ngbNav #nav1="ngbNav" [(activeId)]="active">
+      <li [ngbNavItem]="2" class="nav-item">
+        <a href="javascript:void(0);" ngbNavLink class="nav-link">Bio</a>
+        <ng-template ngbNavContent>
+          <div class="profile-about-me">
+            <div class="pt-4 border-bottom-1 pb-3">
+              <h4 class="text-primary">Acerca de mi</h4>
+              <p class="mb-2">
+                Me gusta trabajar de noche con música instrumental de fondo,
+                especialmente soundtracks de ciencia ficción, porque te ayudan a
+                concentrarte cuando programas. Prefiero las interfaces oscuras,
+                minimalistas, y soy más productivo cuando todo está organizado
+                por carpetas y módulos bien estructurados.
+              </p>
+            </div>
+          </div>
+          <div class="profile-skills mb-4">
+            <h4 class="text-primary mb-2">Skills</h4>
+            <a
+              href="javascript:void(0);"
+              class="btn btn-primary light btn-xs me-1 mb-1"
+              >Git</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="btn btn-primary light btn-xs me-1 mb-1"
+              >Frontend</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="btn btn-primary light btn-xs me-1 mb-1"
+              >Backend</a
+            >
+          </div>
+          <div class="profile-lang mb-4 pt-1">
+            <h4 class="text-primary mb-2">Idioma</h4>
+            <a
+              href="javascript:void(0);"
+              class="badge badge-primary badge-sm light me-1"
+              ><i class="flag-icon flag-icon-us"></i> Español</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="badge badge-primary badge-sm light mx-2"
+              ><i class="flag-icon flag-icon-es"></i> English</a
+            >
+          </div>
+          <div class="profile-personal-info">
+            <h4 class="text-primary mb-4">Información personal</h4>
+            <div class="row mb-2">
+              <div class="col-sm-3 col-5">
+                <h5 class="f-w-500">
+                  Nombres <span class="pull-right">:</span>
+                </h5>
+              </div>
+              <div class="col-sm-9 col-7"><span>Mitchell C.Shay</span></div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-sm-3 col-5">
+                <h5 class="f-w-500">
+                  Correo eletrónico <span class="pull-right">:</span>
+                </h5>
+              </div>
+              <div class="col-sm-9 col-7">
+                <span>example&#64;examplel.com</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-sm-3 col-5">
+                <h5 class="f-w-500">
+                  Availability <span class="pull-right">:</span>
+                </h5>
+              </div>
+              <div class="col-sm-9 col-7">
+                <span>Full Time (Free Lancer)</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-sm-3 col-5">
+                <h5 class="f-w-500">Age <span class="pull-right">:</span></h5>
+              </div>
+              <div class="col-sm-9 col-7"><span>27</span></div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-sm-3 col-5">
+                <h5 class="f-w-500">
+                  Location <span class="pull-right">:</span>
+                </h5>
+              </div>
+              <div class="col-sm-9 col-7">
+                <span>Rosemont Avenue Melbourne, Florida</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-sm-3 col-5">
+                <h5 class="f-w-500">
+                  Year Experience <span class="pull-right">:</span>
+                </h5>
+              </div>
+              <div class="col-sm-9 col-7"><span>07 Year Experiences</span></div>
+            </div>
+          </div>
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="3" class="nav-item">
+        <a href="javascript:void(0);" ngbNavLink class="nav-link"
+          >Configuración</a
+        >
+        <ng-template ngbNavContent>
+          <div class="pt-3">
+            <div class="settings-form">
+              <h4 class="text-primary">Account Setting</h4>
+              <form>
+                <div class="row">
+                  <div class="mb-3 col-md-6">
+                    <label class="form-label">Email</label>
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="mb-3 col-md-6">
+                    <label class="form-label">Password</label>
+                    <div class="position-relative">
+                      <input
+                        type="password"
+                        id="dz-password"
+                        class="form-control"
+                        value="123456"
+                        [type]="hide ? 'text' : 'password'"
+                      />
+                      <span
+                        class="show-pass eye"
+                        [ngClass]="{ active: hide }"
+                        (click)="show_pass()"
+                      >
+                        <i class="fa fa-eye-slash"></i>
+                        <i class="fa fa-eye"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Address</label>
+                  <input
+                    type="text"
+                    placeholder="1234 Main St"
+                    class="form-control"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Address 2</label>
+                  <input
+                    type="text"
+                    placeholder="Apartment, studio, or floor"
+                    class="form-control"
+                  />
+                </div>
+                <div class="row">
+                  <div class="mb-3 col-md-6">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <label class="form-label">State</label>
+
+                    <app-select2 [items]="select2Data"></app-select2>
+                  </div>
+                  <div class="mb-3 col-md-2">
+                    <label class="form-label">Zip</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="form-check custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="gridCheck"
+                    />
+                    <label class="form-check-label form-label" for="gridCheck">
+                      Check me out</label
+                    >
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Sign in</button>
+              </form>
+            </div>
+          </div>
+        </ng-template>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div>
+        <div [ngbNavOutlet]="nav1"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <ng-template #replyModal let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title">Post Reply</h5>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <textarea class="form-control" rows="4">Message</textarea>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-danger light"
+        (click)="modal.dismiss('Cross click')"
+      >
+        Close
+      </button>
+      <button type="button" class="btn btn-primary">Reply</button>
+    </div>
+  </ng-template>
+</div>

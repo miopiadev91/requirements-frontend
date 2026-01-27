@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { AdminLayoutComponent } from './elements/admin-layout/admin-layout.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
 import { CoreHrComponent } from './pages/core-hr/core-hr.component';
 import { FinanceComponent } from './pages/finance/finance.component';
@@ -143,10 +143,8 @@ import { ElementsComponent } from './pages/forms/elements/elements.component';
 import { FormValidationsComponent } from './pages/forms/form-validations/form-validations.component';
 import { PickersComponent } from './pages/forms/pickers/pickers.component';
 import { EmptyComponent } from './pages/error/empty/empty.component';
-import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
-import { LockScreenComponent } from './pages/authentication/lock-screen/lock-screen.component';
-import { LoginComponent } from './pages/authentication/login/login.component';
-import { RegisterComponent } from './pages/authentication/register/register.component';
+import { ForgotPasswordComponent } from './features/auth/pages/forgot-password/forgot-password.component';
+import { RegisterComponent } from './features/auth/pages/register/register.component';
 import { Error400Component } from './pages/error/error400/error400.component';
 import { Error403Component } from './pages/error/error403/error403.component';
 import { Error404Component } from './pages/error/error404/error404.component';
@@ -160,15 +158,23 @@ import { AppUserComponent } from './pages/apps/users-manager/app-user/app-user.c
 import { AppEditProfileComponent } from './pages/apps/users-manager/app-edit-profile/app-edit-profile.component';
 import { AppUserRolesComponent } from './pages/apps/users-manager/app-user-roles/app-user-roles.component';
 import { AppAddRoleComponent } from './pages/apps/users-manager/app-add-role/app-add-role.component';
-import { AppProfile1Component } from './pages/apps/users-manager/app-profile-1/app-profile-1.component';
+import { AppProfile1Component } from './features/app-profile-1/app-profile-1.component';
 import { AppProfile2Component } from './pages/apps/users-manager/app-profile-2/app-profile-2.component';
+import { authGuard } from './features/auth/guards/auth.guard';
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'auth', pathMatch: 'full' },
   {
     path: 'auth',
-    loadChildren: () => import('./pages/authentication/auth.routes').then(m => m.AUTH_ROUTES)
+    loadChildren: () => import('./features/auth/auth.routes').then(m => m.AUTH_ROUTES)
+  },
+  {
+    path: 'dashboard',
+    loadComponent: () => import('./layout/admin-layout/admin-layout.component').then(m=> m.AdminLayoutComponent),
+    canActivate: [authGuard],
+    children: [
+
+    ]
   },
   {
     path: 'admin', component: AdminLayoutComponent, children: [
@@ -354,6 +360,5 @@ export const routes: Routes = [
   { path: 'page-error-404', component: Error404Component },
   { path: 'page-error-500', component: Error500Component },
   { path: 'page-error-503', component: Error503Component },
-  { path: 'page-lock-screen', component: LockScreenComponent },
   { path: '**', component: Error404Component },
 ]

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicTableComponent } from './basic-table/basic-table.component';
 import { DataTableSortingPaginationFilteringComponent } from './data-table-sorting-pagination-filtering/data-table-sorting-pagination-filtering.component';
 import { DynamicallyChangingColumnsDisplayedComponent } from './dynamically-changing-columns-displayed/dynamically-changing-columns-displayed.component';

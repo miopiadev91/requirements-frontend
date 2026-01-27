@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicChartComponent } from './basic-chart/basic-chart.component';
 import { InterpolationChartComponent } from './interpolation-chart/interpolation-chart.component';
 import { LineStylingComponent } from './line-styling/line-styling.component';

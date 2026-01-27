@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { MixedLineAreaComponent } from './mixed-line-area/mixed-line-area.component';
 import { MixedLineColumnComponent } from './mixed-line-column/mixed-line-column.component';
 import { MixedLineColumnAreaComponent } from './mixed-line-column-area/mixed-line-column-area.component';

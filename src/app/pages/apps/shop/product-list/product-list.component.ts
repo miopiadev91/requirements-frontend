@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
 import { CurrencyPipe, NgClass } from '@angular/common';
 interface type {

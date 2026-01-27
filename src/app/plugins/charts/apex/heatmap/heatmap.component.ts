@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { HeatmapBasicComponent } from './heatmap-basic/heatmap-basic.component';
 import { HeatmapColorRangeComponent } from './heatmap-color-range/heatmap-color-range.component';
 import { HeatmapMultipleColorsComponent } from './heatmap-multiple-colors/heatmap-multiple-colors.component';

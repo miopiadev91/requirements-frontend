@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { AikitHeadComponent } from '../../../elements/short-cods/aikit/aikit-head/aikit-head.component';
 import { Select2Component } from '../../../plugins/select2/select2.component';
 import { FormsModule } from '@angular/forms';
@@ -24,7 +24,7 @@ import { TagInputModule } from 'ngx-chips';
 })
 export class SettingComponent {
   value = 20;
-  items: string[] = ['Watercolor','Vector Art','Portrait','Pencil Drawing','Digital Painting','Abstract','Oil Painting','Cartoon','Black And White']; 
+  items: string[] = ['Watercolor','Vector Art','Portrait','Pencil Drawing','Digital Painting','Abstract','Oil Painting','Cartoon','Black And White'];
   breadcrumbList = {
     breadcrumb_path: 'AIKit',
     currentURL: 'Settings',

@@ -7,7 +7,7 @@ import { TabKeepContentComponent } from './tab-keep-content/tab-keep-content.com
 import { TabMarkupComponent } from './tab-markup/tab-markup.component';
 import { TabSelectionComponent } from './tab-selection/tab-selection.component';
 import { TabVerticalComponent } from './tab-vertical/tab-vertical.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-tabs',

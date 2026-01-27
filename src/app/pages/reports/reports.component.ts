@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatSortModule, Sort } from '@angular/material/sort';
-import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
 import { CurrencyPipe } from '@angular/common';
 import { PaginationComponent } from '../../elements/pagination/pagination.component';
 

@@ -4,7 +4,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import { ProfileOverviewHeadComponent } from '../../../elements/short-cods/profile-account/profile-overview-head/profile-overview-head.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { DropdownComponent } from '../../../elements/dropdown/dropdown.component';
 import { BarChartApexComponent } from '../../../elements/chart-config/bar-chart-apex/bar-chart-apex.component';
 import { MyToDoListComponent } from '../../../elements/short-cods/my-to-do-list/my-to-do-list.component';

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { DelayChartComponent } from './delay-chart/delay-chart.component';
 import { DropChartComponent } from './drop-chart/drop-chart.component';
 import { LoopChartComponent } from './loop-chart/loop-chart.component';

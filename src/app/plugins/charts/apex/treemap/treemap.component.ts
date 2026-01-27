@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 import { TreemapBasicComponent } from './treemap-basic/treemap-basic.component';
 import { TreemapColorRangeComponent } from './treemap-color-range/treemap-color-range.component';
 import { TreemapDistributedComponent } from './treemap-distributed/treemap-distributed.component';

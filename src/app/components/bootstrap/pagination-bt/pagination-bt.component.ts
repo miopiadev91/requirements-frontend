@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { PaginationCircleComponent } from './pagination-circle/pagination-circle.component';
 import { PaginationColorComponent } from './pagination-color/pagination-color.component';
 import { PaginationDefaultComponent } from './pagination-default/pagination-default.component';

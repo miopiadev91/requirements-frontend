@@ -4,9 +4,9 @@ import { RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { RequirementsService } from '../../../services/requirements/requirements.service';
-import { NgxToastrService } from '../../../_services/ngx-toastr/ngx-toastr.service';
+import { NgxToastrService } from '../../../core/services/ngx-toastr/ngx-toastr.service';
 import {
   Requirement,
   RequirementStats,

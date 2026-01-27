@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatSortModule, Sort } from '@angular/material/sort';
-import { BreadcrumbComponent } from '../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
 import { CurrencyPipe } from '@angular/common';
 import { PaginationComponent } from '../../elements/pagination/pagination.component';
 
@@ -59,7 +59,7 @@ export class FinanceComponent {
       account_no: 1234500000000,
       branch_code: 1234,
       branch_name: 'Bank Of Lundon'
-    }, 
+    },
     {
       account_title: 'Fixed deposit',
       amount: 500,
@@ -122,7 +122,7 @@ export class FinanceComponent {
       account_no: 1234500000000,
       branch_code: 1234,
       branch_name: 'Bank Of Lundon'
-    }, 
+    },
     {
       account_title: 'Fixed deposit',
       amount: 500,

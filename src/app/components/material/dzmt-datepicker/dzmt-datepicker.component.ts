@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BasicDateRangeComponent } from './basic-date-range/basic-date-range.component';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicDatepickerComponent } from './basic-datepicker/basic-datepicker.component';
 import { ComparisonRangesComponent } from './comparison-ranges/comparison-ranges.component';
 import { DatepickerActionButtonsComponent } from './datepicker-action-buttons/datepicker-action-buttons.component';

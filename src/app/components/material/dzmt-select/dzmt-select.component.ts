@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../elements/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../../shared/components/breadcrumb/breadcrumb.component';
 import { BasicSelectComponent } from './basic-select/basic-select.component';
 import { CustomErrorStateMatcherComponent } from './custom-error-state-matcher/custom-error-state-matcher.component';
 import { CustomPanelStylingComponent } from './custom-panel-styling/custom-panel-styling.component';

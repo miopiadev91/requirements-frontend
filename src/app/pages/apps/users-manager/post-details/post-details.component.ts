@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { BreadcrumbComponent } from '../../../../elements/breadcrumb/breadcrumb.component';
-import { ProfileHeadComponent } from '../../../../elements/short-cods/apps/profile-head/profile-head.component';
 import { ProfileSidMenuComponent } from '../../../../elements/short-cods/apps/profile-sid-menu/profile-sid-menu.component';
+import { ProfileHeadComponent } from '../../../../features/app-profile-1/components/profile-head/profile-head.component';
+import { BreadcrumbComponent } from '../../../../shared/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-post-details',
